@@ -56,16 +56,15 @@ body {
   }
 }
 
-.flx-prnt .flx-content .img-container .links {
-  width: 100%;
-  margin: 20px 0 20px 0;
-  background-color: coral;
-}
-
 .flx-prnt .flx-content .title-container {
   margin: 20px 0 20px 0;
   font-size: 24px;
   font-weight: bold;
+}
+
+.flx-prnt .flx-content .links {
+  width: 100%;
+  padding: 20px 0 20px 0;
 }
 
 .flx-prnt .flx-ad {

@@ -54,14 +54,21 @@
                     <div class="title-container">
                         <p><%= data.title %></p>
                     </div>
+                    <!-- facebook share link -->
+                    <div class="links">
+                        <div class="fb-share-button" data-href="" data-layout="button_count" data-size="large"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a></div>
+                    </div>
+
                     <div class="img-container">
                         <img src="<%=data.photoUrl%>" alt="This image is not found">
                     </div>
                     <div class="details-container">
                         <%- data.newsDetails.details%>
                     </div>
+
+                    <!-- facebook share link -->
                     <div class="links">
-                        <div id="fbShareLink" class="fb-share-button" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button_count" data-size="large"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a></div>
+                        <div class="fb-share-button" data-href="" data-layout="button_count" data-size="large"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a></div>
                     </div>
                 </div>
 
@@ -89,7 +96,7 @@
         crossorigin="anonymous"></script>
     <script>
         let currentLocation = $(location).attr('href')
-        $('#fbShareLink').attr('data-href',currentLocation)
+        $('.fb-share-button').attr('data-href',currentLocation)
     </script>
 </body>
 
