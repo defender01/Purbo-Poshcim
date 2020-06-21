@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+
+    <!-- google fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Courier+Prime&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Hind Siliguri"
+    />
+
+    <!-- google adsense -->
+    <script data-ad-client="ca-pub-4266924221770969" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+
+    <!-- stylesheet for navbar -->
+    <link rel="stylesheet" href="/assets/cssFiles/navbar.css" />
+    <link rel="stylesheet" href="/assets/cssFiles/newsAndVideos.css" />
+    <link rel="stylesheet" href="/assets/cssFiles/footer.css" />
+
+    <title>সকল সংবাদ - ক্যাম্পাস প্রতিদিন</title>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-169815710-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-169815710-1');
+    </script>
+  </head>
+
+  <body>
+    <div class="page-container">
+      <div class="content-wrap">
+        <!-- navigation bar -->
+        <% include ./segments/adminNavbar %>
+        <!-- this part contains news -->
+        <div class="flx-vid-container">
+          <div class="flx-cld-major">
+            <div class="section-title">
+              সকল সংবাদ
+            </div>
+            <br />
+          </div>
+        </div>
+        <div class="add-new">
+          <button
+            type="submit"
+            class="btn btn-secondary"
+            onclick="location.href='/admin/createNews'"
+          >
+            Add New News
+          </button>
+        </div>
+        <div class="flx-news-container">
+
+          <div class="flx-cld-minor">
+          </div>
+
+          <div class="flx-cld-major">
+            <br />
+            <% for (let i=0; i< data.length; i++) { %>
+            <div class="admin-cont">
+              <div class="flx-card">
+                <img src="<%= data[i].photoUrl %>" alt="This image is not found" />
+                <% if( data[i].title.length > 50) { %>
+                <div class="item-title">
+                  <a href="/admin/news/<%=data[i]._id%>"><%= data[i].title.substring(0,49) + ' . . .'%></a> 
+                </div>
+                <%} else{ %>
+                <div class="item-title">
+                  <a href="/admin/news/<%=data[i]._id%>"><%= data[i].title%></a> 
+                </div>                
+                <% } %>
+                <div class="change-opt">
+                  <button
+                    type="button"
+                    class="btn btn-success"
+                    onclick="location.href='/admin/news/update/<%= data[i]._id%>'"
+                  >
+                    Update
+                  </button>
+                  <button
+                    type="button"
+                    class="btn btn-danger"
+                    onclick="location.href='/admin/news/delete/<%= data[i]._id%>/<%= data[i].newsDetails%>'"
+                  >
+                    Delete
+                  </button>
+                </div>
+              </div>
+            </div>
+            <% } %>
+          </div>
+
+          <div class="flx-cld-minor">
+          </div>
+          
+        </div>
+      </div>
+    </div>
+
+    <% include ./segments/footer.ejs %>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

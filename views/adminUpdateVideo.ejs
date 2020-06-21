@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <title>পরিবতন - ক্যাম্পাস প্রতিদিন</title>
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+
+    <!-- google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Courier+Prime&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hind Siliguri">
+
+    <!-- google adsense -->
+    <script data-ad-client="ca-pub-4266924221770969" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+
+    <!-- stylesheet for navbar -->
+    <link rel="stylesheet" href="/assets/cssFiles/navbar.css">
+    <link rel="stylesheet" href="/assets/cssFiles/newsAndVideos.css" />
+    <link rel="stylesheet" href="/assets/cssFiles/footer.css">
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-169815710-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-169815710-1');
+    </script>
+  </head>
+
+  <body>
+    <div class="page-container">
+      <div class="content-wrap">
+        <form action="/admin/video/update/<%= data._if %>" method="POST">
+          <!-- navigation bar -->
+          <% include ./segments/adminNavbar %>
+          <div class="form-container">
+            <div class="part">
+              <div class="title">
+                Title:
+              </div>
+              <div class="input-elm">
+                  <input type="text" name="title" value="<%= data.title %>" required >
+              </div>
+            </div>
+  
+            <div class="part">
+              <div class="title">
+                Secect a Class:
+              </div>
+              <select  class="btn btn-info" name="class" id="classId" required>
+                  <% for(var i = 0 ; i < classes.length; i++) {%>
+                      <% if(data.class == classes[i]) {%>
+                          <option value="<%= classes[i] %>" selected><%= classes[i] %></option>
+                      <%} else {%>
+                          <option value="<%= classes[i] %>"><%= classes[i] %></option>            
+                      <% } %>
+                  <% } %>                    
+              </select>
+            </div>
+  
+            <div class="part">
+              <div class="title">
+                Enter Video (enter embeded url):
+              </div>
+              <div class="input-elm">
+                  <input type="text" name="videoUrl" value="<%= data.videoUrl %>" required>
+              </div>
+            </div>
+  
+  
+            <div class="btn-container">
+              <button type="submit" class="btn btn-success">UPDATE</button>
+            </div>
+            
+          </div>
+        </form>
+      </div>
+    </div>
+    <% include ./segments/footer.ejs %>
+    
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    
+  </body>
+</html>

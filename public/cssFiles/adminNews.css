@@ -1,0 +1,208 @@
+body {
+  height: 100vh;
+}
+
+.page-container {
+  min-height: 100%;
+}
+
+.page-container .content-wrap {
+  overflow: auto;
+  padding-bottom: 270px;
+}
+
+.flx-vid-container {
+  background-color: blueviolet;
+}
+
+@media (min-width: 1100px) {
+  .flx-vid-container {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.flx-vid-container .flx-cld-major {
+  font-family: "Hind Siliguri", sans-serif;
+  margin: 5px;
+  flex: 4;
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.flx-vid-container .flx-cld-major .section-title {
+  padding: 10px;
+  text-align: center;
+  color: white;
+  width: 100%;
+  font-size: 30px;
+}
+
+.flx-vid-container .flx-cld-major .flx-card {
+  margin: 10px;
+  width: 300px;
+  height: 240px;
+  background-color: white;
+  border-radius: 5px;
+}
+
+.flx-vid-container .flx-cld-major .flx-card iframe {
+  width: 100%;
+  height: 180px;
+}
+
+.flx-vid-container .flx-cld-major .flx-card .item-title {
+  margin: 5px;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.flx-vid-container .flx-cld-major .see-more {
+  margin: 5px;
+  width: 100%;
+  text-align: right;
+  font-size: 24px;
+}
+
+.flx-vid-container .flx-cld-major .see-more a {
+  color: white;
+}
+
+.flx-vid-container .flx-cld-major .see-more a:hover {
+  font-size: 25px;
+  color: #45a4fd;
+  text-decoration: underline;
+}
+
+.flx-vid-container .flx-cld-minor {
+  margin: 5px;
+  flex: 1;
+}
+
+@media (min-width: 1100px) {
+  .flx-news-container {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.flx-news-container .flx-cld-major {
+  font-family: "Hind Siliguri", sans-serif;
+  margin: 5px;
+  flex: 4;
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.flx-news-container .flx-cld-major .section-title {
+  padding: 10px;
+  text-align: center;
+  color: #2a2347;
+  width: 100%;
+  font-size: 30px;
+}
+
+.flx-news-container .flx-cld-major .flx-card {
+  margin: 10px;
+  width: 300px;
+  height: 240px;
+  background-color: #eee;
+  border-radius: 5px;
+}
+
+@media (max-width: 500px) {
+  .flx-news-container .flx-cld-major .flx-card {
+    width: 150px;
+    height: 160px;
+  }
+}
+
+.flx-news-container .flx-cld-major .flx-card img {
+  width: 100%;
+  height: 180px;
+}
+
+@media (max-width: 500px) {
+  .flx-news-container .flx-cld-major .flx-card img {
+    height: 100px;
+  }
+}
+
+.flx-news-container .flx-cld-major .flx-card .item-title {
+  margin: 5px;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.flx-news-container .flx-cld-major .flx-card .item-title:hover {
+  color: blue;
+  text-decoration: underline;
+}
+
+@media (max-width: 500px) {
+  .flx-news-container .flx-cld-major .flx-card .item-title {
+    font-size: 12px;
+  }
+}
+
+.flx-news-container .flx-cld-major .flx-card .change-opt {
+  text-align: center;
+  margin: 5px;
+}
+
+.flx-news-container .flx-cld-major .see-more {
+  margin: 5px;
+  width: 100%;
+  text-align: right;
+  font-size: 24px;
+}
+
+.flx-news-container .flx-cld-major .see-more a:hover {
+  font-size: 25px;
+  color: #45a4fd;
+  text-decoration: underline;
+}
+
+.flx-news-container .flx-cld-minor {
+  margin: 5px;
+  flex: 1;
+}
+
+.add-new {
+  width: 100%;
+  text-align: center;
+  padding: 10px;
+}
+
+.form-container {
+  padding: 10px  10px  10px  10px;
+  width: calc(100% - 10%);
+  margin: 20px 5% 20px 5%;
+  background-color: #e9ecef;
+}
+
+@media (min-width: 800px) {
+  .form-container {
+    width: calc(100% - 30%);
+    margin: 20px 15% 20px 15%;
+  }
+}
+
+.form-container .part {
+  padding: 10px;
+}
+
+.form-container .part .title {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.form-container .btn-container {
+  width: 100%;
+  padding: 10px;
+  text-align: center;
+}

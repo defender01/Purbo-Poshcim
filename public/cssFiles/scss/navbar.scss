@@ -1,0 +1,43 @@
+.nav-container {
+	background-color: #f8f9fa;
+}
+nav {
+	ul {
+		li {
+			color: #ee3434;
+			&:hover {				
+				font-weight: bold;
+				font-size: 15px;
+			}
+		}
+	}
+}
+.navbar-light {
+	.navbar-nav {
+		.nav-link {
+			color: #343a40;
+			&:hover {
+                background-color: #d5e9fd;
+				color: rgb(69, 164, 253);
+			}
+		}
+	}
+	.navbar-brand {
+		font-family: "Galada", cursive;
+		color: #ee3434;
+        font-size: 30px;
+        &:hover {
+            // background-color: #d5e9fd;
+             color: #ee3434;
+        }
+	}
+}
+@media (min-width: 992px) {
+	.navbar-expand-lg {
+		.navbar-collapse {
+			display: flex !important;
+			flex-basis: auto;
+			justify-content: flex-end;
+		}
+	}
+}

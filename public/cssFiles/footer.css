@@ -1,0 +1,15 @@
+.footer {
+  position: relative;
+  height: 270px;
+  margin-top: -270px;
+}
+
+.footer .upper-body {
+  height: 220px;
+  background-color: #4f4d55;
+}
+
+.footer .lower-body {
+  height: 50px;
+  background-color: #2b2b2c;
+}
