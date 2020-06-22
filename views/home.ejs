@@ -66,7 +66,7 @@
             <div class="section-title">
               সাম্প্রতিক সংবাদ
             </div>
-            <% for (let i=0; i< newsData .length; i++) { %>
+            <% for (let i=0; i< Math.min(newsData .length, 12); i++) { %>
             <div class="flx-card">
               <img
                 src="<%=newsData[i].photoUrl%>"
