@@ -62,9 +62,14 @@ body {
   font-weight: bold;
 }
 
-.flx-prnt .flx-content .links {
+.flx-prnt .flx-content .fb-share-cont {
   width: 100%;
-  padding: 20px 0 20px 0;
+  margin: 20px 0 20px 0;
+}
+
+.flx-prnt .flx-content .fb-cmnt-cont {
+  width: 100%;
+  margin: 20px 0 20px 0;
 }
 
 .flx-prnt .flx-ad {
