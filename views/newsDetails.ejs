@@ -40,6 +40,10 @@
     <div id="fb-root"></div>
     <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v7.0" nonce="Fx4PnXAX"></script>
 
+    <!-- fb comment -->
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v7.0" nonce="3jdDbXkP"></script>
+
     <div class="page-container">
         <div class="content-wrap">
             <!-- navigation bar -->
@@ -55,7 +59,7 @@
                         <p><%= data.title %></p>
                     </div>
                     <!-- facebook share link -->
-                    <div class="links">
+                    <div class="fb-share">
                         <div class="fb-share-button" data-href="" data-layout="button_count" data-size="large"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a></div>
                     </div>
 
@@ -67,9 +71,14 @@
                     </div>
 
                     <!-- facebook share link -->
-                    <div class="links">
+                    <div class="fb-share">
                         <div class="fb-share-button" data-href="" data-layout="button_count" data-size="large"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a></div>
                     </div>
+                    <!-- fb comment -->
+                    <div class="fb-comment">
+                        <div class="fb-comments" data-href="https://developers.facebook.com/docs/plugins/comments#configurator" data-numposts="5" data-width=""></div>
+                    </div>
+
                 </div>
 
                 <div class="flx-ad">
@@ -97,6 +106,7 @@
     <script>
         let currentLocation = $(location).attr('href')
         $('.fb-share-button').attr('data-href',currentLocation)
+        $('.fb-comments').attr('data-href',currentLocation)
     </script>
 </body>
 
