@@ -1,33 +1,27 @@
 .nav-container {
+  position: sticky;
+  top: 0;
   background-color: #f8f9fa;
 }
 
 nav ul li {
   color: #ee3434;
-}
-
-nav ul li:hover {
-  font-weight: bold;
-  font-size: 15px;
+  font-size: 16px;
 }
 
 .navbar-light .navbar-nav .nav-link {
   color: #343a40;
 }
 
+@media (min-width: 800px) {
+  .navbar-light .navbar-nav .nav-link {
+    margin: 0 20px 0 20px;
+  }
+}
+
 .navbar-light .navbar-nav .nav-link:hover {
   background-color: #d5e9fd;
   color: #45a4fd;
-}
-
-.navbar-light .navbar-brand {
-  font-family: "Galada", cursive;
-  color: #ee3434;
-  font-size: 30px;
-}
-
-.navbar-light .navbar-brand:hover {
-  color: #ee3434;
 }
 
 @media (min-width: 992px) {
