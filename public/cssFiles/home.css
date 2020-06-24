@@ -56,7 +56,7 @@ body {
 
 .flx-vid-container .flx-cld-major .flx-card .item-title {
   margin: 5px;
-  font-size: 15px;
+  font-size: 18px;
   font-weight: bold;
 }
 
@@ -139,8 +139,7 @@ body {
 
 .flx-news-container .flx-cld-major .flx-card .item-title {
   margin: 5px;
-  font-size: 15px;
-  font-weight: bold;
+  font-size: 18px;
 }
 
 .flx-news-container .flx-cld-major .flx-card .item-title:hover {
