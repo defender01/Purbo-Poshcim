@@ -1,4 +1,5 @@
 body {
+  background-color: #eee;
   height: 100vh;
 }
 .page-container {
@@ -8,71 +9,7 @@ body {
     padding-bottom: 270px;
   }
 }
-  .flx-vid-container {
-    background-color: blueviolet;
   
-    @media (min-width: 1100px) {
-      display: flex;
-      justify-content: space-between;
-    }
-    .flx-cld-major {
-      font-family: "Hind Siliguri", sans-serif;
-      margin: 5px;
-      flex: 4;
-      flex-wrap: wrap;
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
-  
-      .section-title {
-        // font-family: 'Galada', cursive;
-        padding: 10px;
-        text-align: center;
-        color: rgb(255, 255, 255);
-        width: 100%;
-        font-size: 30px;
-      }
-  
-      .flx-card {
-        margin: 10px;
-        width: 300px;
-        height: 240px;
-        background-color: rgb(255, 255, 255);
-        border-radius: 5px;
-  
-        iframe {
-          width: 100%;
-          height: 180px;
-        }
-  
-        .item-title {
-          margin: 5px;
-          font-size: 15px;
-          font-weight: bold;
-        }
-      }
-  
-      .see-more {
-        margin: 5px;
-        width: 100%;
-        text-align: right;
-        font-size: 24px;
-        a{
-          color: white;
-          &:hover {
-              font-size: 25px;
-              color: rgb(69, 164, 253);
-              text-decoration: underline;
-            }
-        }
-      }
-    }
-    .flx-cld-minor {
-      margin: 5px;
-      flex: 1;
-      // background-color: brown;
-    }
-  }
   
   .flx-news-container {
     @media (min-width: 1100px) {
@@ -85,7 +22,7 @@ body {
       flex: 4;
       flex-wrap: wrap;
       display: flex;
-      justify-content: space-around;
+      justify-content: space-between;
       align-items: center;
   
       .section-title {
@@ -98,42 +35,47 @@ body {
       }
   
       .flx-card {
-          margin: 10px;
-          width: 300px;
-          height: 240px;
-          background-color: #eee;
-          border-radius: 5px;
+        margin: 10px;
+        width: 300px;
+        height: 240px;
+        background-color: rgb(255, 255, 255);
+        border-radius: 5px;
   
-          @media (max-width: 500px) {
-            width: 150px;
-            height: 160px;          
-          }
-          
+        @media (max-width: 500px) {
+          width: 150px;
+          height: 200px;
+        }
   
         img {
           width: 100%;
           height: 180px;
   
           @media (max-width: 500px) {
-            height: 100px;          
+            height: 100px;
           }
         }
   
         .item-title {
           margin: 5px;
-          font-size: 15px;
-          font-weight: bold;
+          font-size: 18px;
           &:hover {
+            color: blue;
+            text-decoration: underline;
+          }
+          @media (max-width: 500px) {
+            font-size: 16px;
+          }
+          a{
+            color: black;
+            &:hover {
               color: blue;
               text-decoration: underline;
             }
-          @media (max-width: 500px) {
-            font-size: 12px;         
           }
         }
-        .change-opt{
-            text-align: center;
-            margin: 5px;
+        .change-opt {
+          text-align: center;
+          margin: 5px;
         }
       }
   
@@ -142,12 +84,12 @@ body {
         width: 100%;
         text-align: right;
         font-size: 24px;
-        a{
+        a {
           &:hover {
-              font-size: 25px;
-              color: rgb(69, 164, 253);
-              text-decoration: underline;
-            }
+            font-size: 25px;
+            color: rgb(69, 164, 253);
+            text-decoration: underline;
+          }
         }
       }
     }

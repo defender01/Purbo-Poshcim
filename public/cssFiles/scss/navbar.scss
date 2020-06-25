@@ -1,9 +1,29 @@
 .nav-container {
-	position: sticky;
 	top: 0;
+}
+.bg-light {
+    background-color: #ffffff!important;
 }
 
 nav {
+	.nav-logo{
+		padding: 0;
+		margin: 5px;
+		width: 200px;
+		height: 50px;
+		
+		img{
+			margin: 0;
+			padding: 0;
+			width: 100%;
+			height: 100%;
+			border: none;
+		}
+		@media (min-width: 800px){
+			display: none;
+		}
+	}
+	
 	
 	ul {
 		li {
@@ -24,6 +44,15 @@ nav {
 				color: rgb(69, 164, 253);
 			}
 		}
+	}
+	.navbar-brand {	
+		font-family: "Galada", cursive;	
+		color: #ee3434;	
+        font-size: 30px;	
+        &:hover {	
+            // background-color: #d5e9fd;	
+             color: #ee3434;	
+        }	
 	}
 	
 }

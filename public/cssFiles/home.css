@@ -1,5 +1,5 @@
 body {
-  position: relative;
+  background-color: #eee;
   height: 100vh;
 }
 
@@ -10,10 +10,6 @@ body {
 .page-container .content-wrap {
   overflow: auto;
   padding-bottom: 270px;
-}
-
-.flx-vid-container {
-  background-color: blueviolet;
 }
 
 @media (min-width: 1100px) {
@@ -36,7 +32,7 @@ body {
 .flx-vid-container .flx-cld-major .section-title {
   padding: 10px;
   text-align: center;
-  color: white;
+  color: #2a2347;
   width: 100%;
   font-size: 30px;
 }
@@ -56,7 +52,7 @@ body {
 
 .flx-vid-container .flx-cld-major .flx-card .item-title {
   margin: 5px;
-  font-size: 18px;
+  font-size: 15px;
   font-weight: bold;
 }
 
@@ -69,10 +65,6 @@ body {
   width: 100%;
   text-align: right;
   font-size: 24px;
-}
-
-.flx-vid-container .flx-cld-major .see-more a {
-  color: white;
 }
 
 .flx-vid-container .flx-cld-major .see-more a:hover {
@@ -99,7 +91,7 @@ body {
   flex: 4;
   flex-wrap: wrap;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
 }
 
@@ -115,14 +107,14 @@ body {
   margin: 10px;
   width: 300px;
   height: 240px;
-  background-color: #eee;
+  background-color: white;
   border-radius: 5px;
 }
 
 @media (max-width: 500px) {
   .flx-news-container .flx-cld-major .flx-card {
     width: 150px;
-    height: 160px;
+    height: 200px;
   }
 }
 
@@ -149,7 +141,7 @@ body {
 
 @media (max-width: 500px) {
   .flx-news-container .flx-cld-major .flx-card .item-title {
-    font-size: 12px;
+    font-size: 16px;
   }
 }
 
