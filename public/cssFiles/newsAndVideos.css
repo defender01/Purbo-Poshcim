@@ -1,17 +1,3 @@
-body {
-  background-color: #eee;
-  height: 100vh;
-}
-
-.page-container {
-  min-height: 100%;
-}
-
-.page-container .content-wrap {
-  overflow: auto;
-  padding-bottom: 270px;
-}
-
 @media (min-width: 1100px) {
   .flx-vid-container {
     display: flex;
@@ -114,7 +100,7 @@ body {
 @media (max-width: 500px) {
   .flx-news-container .flx-cld-major .flx-card {
     width: 150px;
-    height: 160px;
+    height: 200px;
   }
 }
 
@@ -131,8 +117,7 @@ body {
 
 .flx-news-container .flx-cld-major .flx-card .item-title {
   margin: 5px;
-  font-size: 15px;
-  font-weight: bold;
+  font-size: 18px;
 }
 
 .flx-news-container .flx-cld-major .flx-card .item-title:hover {
@@ -142,7 +127,7 @@ body {
 
 @media (max-width: 500px) {
   .flx-news-container .flx-cld-major .flx-card .item-title {
-    font-size: 12px;
+    font-size: 16px;
   }
 }
 
@@ -176,6 +161,20 @@ body {
 .flx-news-container .flx-cld-minor {
   margin: 5px;
   flex: 1;
+}
+
+body {
+  background-color: #eee;
+  height: 100vh;
+}
+
+.page-container {
+  min-height: 100%;
+}
+
+.page-container .content-wrap {
+  overflow: auto;
+  padding-bottom: 270px;
 }
 
 .add-new {

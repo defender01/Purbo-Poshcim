@@ -22,8 +22,8 @@ body {
 .flx-prnt .flx-content {
   margin-top: 30px;
   background-color: white;
-  flex: 1.5;
-  padding: 30px;
+  flex: 2;
+  padding: 60px;
 }
 
 .flx-prnt .flx-content .img-container {
