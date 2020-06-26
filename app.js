@@ -4,6 +4,7 @@ var bodyParser = require("body-parser")
 var flash = require('connect-flash')
 var session = require("express-session")
 var passport = require("passport")
+const statsModel = require("./models/stats");
 
 var app = express();
 
@@ -66,10 +67,25 @@ app.use("/assets", express.static(__dirname + "/public"))
 // all used photos are in resources
 app.use("/resources", express.static(__dirname + "/resources"))
 
-app.use('/', require('./routes/home'));
-app.use('/users', require('./routes/users'));
-app.use("/auth", require("./routes/auth.js"))
-app.use("/admin", require("./routes/admin.js"))
+async function increaseVisit(req, res, next){
+  let data = await statsModel.findOne({})
+  console.log({data})
+  let count = data.visit+1
+  await statsModel.findOneAndUpdate(
+    {},
+    {
+      visit: count
+    }
+  )
+  data = await statsModel.findOne({})
+  console.log({data})
+  next()
+}
+
+app.use('/',increaseVisit, require('./routes/home'));
+app.use('/users',increaseVisit, require('./routes/users'));
+app.use("/auth",increaseVisit, require("./routes/auth.js"))
+app.use("/admin",increaseVisit, require("./routes/admin.js"))
 
 
 
