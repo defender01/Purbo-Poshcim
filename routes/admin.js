@@ -58,7 +58,7 @@ router.get("/news/:class", checkAuthenticated, async (req, res) => {
     });    
   }    
   data = data.reverse()
-  
+
   res.render("adminNews", { classes, data, nClass, displayName });
 });
 
@@ -82,6 +82,7 @@ router.get("/createNews", checkAuthenticated, (req, res) => {
 
 router.post("/createNews", checkAuthenticated, async (req, res) => {
   let data = req.body;
+  // res.send(data)
   let details = new newsDetailsModel({
     _id: new mongoose.Types.ObjectId(),
     details: data.newsDetails
@@ -94,12 +95,12 @@ router.post("/createNews", checkAuthenticated, async (req, res) => {
     isRecent: data.recent=='checked',
     newsDetails: details._id,
     photoUrl: data.photoUrl,
-    created: Date.now
+    created: Date.now()
   });
 
   await details.save();
   await news.save();
-  res.redirect("/admin/news");
+  res.redirect("/admin");
 });
 
 router.get("/news/update/:id", checkAuthenticated, async (req, res) => {
@@ -171,7 +172,7 @@ router.post("/createVideo", checkAuthenticated, async (req, res) => {
     title: data.title,
     class: data.class,
     videoUrl: data.videoUrl,
-    created: Date.now
+    created: Date.now()
   });
 
   data = await news.save();
