@@ -68,17 +68,17 @@ app.use("/assets", express.static(__dirname + "/public"))
 app.use("/resources", express.static(__dirname + "/resources"))
 
 async function increaseVisit(req, res, next){
-  let data = await statsModel.findOne({})
-  console.log({data})
-  let count = data.visit+1
-  await statsModel.findOneAndUpdate(
-    {},
-    {
-      visit: count
-    }
-  )
-  data = await statsModel.findOne({})
-  console.log({data})
+   let data = await statsModel.findOne({})
+   console.log({data})
+   let count = data.visit+1
+   await statsModel.findOneAndUpdate(
+     {},
+     {
+       visit: count
+     }
+   )
+   data = await statsModel.findOne({})
+   console.log({data})
   next()
 }
 
