@@ -54,15 +54,7 @@
         <% include ./segments/header%>
         <!-- navigation bar -->
         <% include ./segments/adminNavbar %>
-        <!-- this part contains news -->
-        <div class="flx-vid-container">
-          <div class="flx-cld-major">
-            <div class="section-title">
-              <h3><%= nClass %></h3>
-            </div>
-            <br />
-          </div>
-        </div>
+      
         <div class="add-new">
           <button
             type="submit"
@@ -78,7 +70,9 @@
           </div>
 
           <div class="flx-cld-major">
-            <br />
+            <div class="section-title">
+              <h3><%= nClass %></h3>
+            </div>
             <% for (let i=0; i< data.length; i++) { %>
             <div class="admin-cont">
               <div class="flx-card">

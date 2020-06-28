@@ -54,21 +54,16 @@
             <!-- navigation bar -->
             <% include ./segments/navbar %>
             <!-- this part contains news -->
-            <div class="flx-vid-container">
-                <div class="flx-cld-major">
-                    <div class="section-title">
-                        <h3><%= nClass %></h3>
-                    </div>
-                    <br>
-                </div>
-            </div>
+            
             <div class="flx-news-container">
                 
                 <div class="flx-cld-minor">
                 </div>
 
                 <div class="flx-cld-major">
-                    <br>
+                    <div class="section-title">
+                        <h3><%= nClass %></h3>
+                    </div>
                     <% for (let i=0; i< data.length; i++) { %>
                         <div class="flx-card">
                             <img src="<%=data[i].photoUrl%>" alt="This image is not found">
