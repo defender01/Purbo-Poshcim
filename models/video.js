@@ -13,6 +13,9 @@ const videoSchema = new mongoose.Schema({
   updated: { 
     type: Date, 
     default: Date.now
+  },
+  created: { 
+    type: Date
   }
 });
 

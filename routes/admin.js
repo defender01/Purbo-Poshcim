@@ -5,18 +5,18 @@ const mongoose = require("mongoose");
 const { newsModel, newsDetailsModel } = require("../models/news");
 const videoModel = require("../models/video");
 
-let classes = [
+const classes = [
   "বাংলাদেশ",
   "আন্তর্জাতিক",
   "অর্থনীতি",
   "ক্যাম্পাস",
-  "শিক্ষা",
-  "কর্মসূচী",
-  "খেলা",
+  "শিক্ষা",    
+  "খেলা",   
+  "সাহিত্য",
   "বিনোদন",
   "উদ্ভাবন",
   "মতামত",
-  "সাহিত্য",
+  "কর্মসূচী",
 ];
 
 const {
@@ -24,21 +24,46 @@ const {
   checkAuthenticated,
 } = require("../controllers/auth_helper");
 
-router.get("/", checkAuthenticated, (req, res) => {
+router.get("/", checkAuthenticated, async (req, res) => {
   let displayName = req.user.name.displayName;
-  res.render("admin", { displayName });
-});
-
-router.get("/news", checkAuthenticated, async (req, res) => {
-  let displayName = req.user.name.displayName;
-  await newsModel.find({}, (err, data) => {
-    data = data.reverse()
+  let newsData = {}
+  await newsModel.find({isRecent: true}, (err, result) => {
     if (err) console.error(err);
-    else res.render("adminNews", { data, displayName });
+    newsData['সাম্প্রতিক'] = result.reverse();
   });
+  for(let i=0; i< classes.length; i++){        
+    await newsModel.find({class: classes[i]}, (err, result) => {
+      if (err) console.error(err);
+      newsData[classes[i]] = result.reverse();
+    }); 
+  }
+  let vidData = (await videoModel.find({})).reverse();
+  res.render("admin", { classes, vidData, newsData,  displayName });
 });
 
-router.get("/news/:id", async (req, res) => {
+router.get("/news/:class", checkAuthenticated, async (req, res) => {
+  let displayName = req.user.name.displayName;
+  let nClass = req.params.class;
+  let data;
+  if(nClass == 'সাম্প্রতিক'){
+    data = await newsModel
+    .find({
+      isRecent: true,
+    }); 
+  }
+  else{
+    data = await newsModel
+    .find({
+      class: nClass,
+    });    
+  }    
+  data = data.reverse()
+  
+  res.render("adminNews", { classes, data, nClass, displayName });
+});
+
+router.get("/newsDetails/:id", checkAuthenticated, async (req, res) => {
+  let displayName = req.user.name.displayName;
   let id = req.params.id;
   let data = await newsModel
     .findOne({
@@ -47,27 +72,29 @@ router.get("/news/:id", async (req, res) => {
     .populate({
       path: "newsDetails",
     });
-  res.render("adminNewsDetails", { data });
+  res.render("adminNewsDetails", { classes, data, displayName });
 });
 
 router.get("/createNews", checkAuthenticated, (req, res) => {
   let displayName = req.user.name.displayName;
-  res.render("adminCreateNews", { displayName, classes });
+  res.render("adminCreateNews", { classes, displayName });
 });
 
 router.post("/createNews", checkAuthenticated, async (req, res) => {
   let data = req.body;
   let details = new newsDetailsModel({
     _id: new mongoose.Types.ObjectId(),
-    details: data.newsDetails,
+    details: data.newsDetails
   });
 
   let news = new newsModel({
     _id: new mongoose.Types.ObjectId(),
     title: data.title,
     class: data.class,
+    isRecent: data.recent=='checked',
     newsDetails: details._id,
     photoUrl: data.photoUrl,
+    created: Date.now
   });
 
   await details.save();
@@ -86,11 +113,12 @@ router.get("/news/update/:id", checkAuthenticated, async (req, res) => {
     .populate({
       path: "newsDetails",
     });
-  res.render("adminUpdateNews", { data, classes, displayName });
+  res.render("adminUpdateNews", { classes, data,  displayName });
 });
 
-router.post("/news/update/:id/:dId", checkAuthenticated, async (req, res) => {
+router.post("/news/update/:id/:dId", checkAuthenticated, async (req, res) => {  
   let data = req.body;
+  console.log(data.recent=='checked')
   let displayName = req.user.name.displayName;
   let id = req.params.id;
   let dId = req.params.dId;
@@ -99,6 +127,7 @@ router.post("/news/update/:id/:dId", checkAuthenticated, async (req, res) => {
     {
       title: data.title,
       class: data.class,
+      isRecent: data.recent=='checked',
       photoUrl: data.photoUrl,
     }
   );
@@ -109,7 +138,7 @@ router.post("/news/update/:id/:dId", checkAuthenticated, async (req, res) => {
     { details: data.newsDetails }
   );
 
-  res.redirect("/admin/news");
+  res.redirect("/admin/newsDetails/"+id);
 });
 
 router.get("/news/delete/:id/:dId", checkAuthenticated, async (req, res) => {
@@ -127,13 +156,13 @@ router.get("/videos", checkAuthenticated, async (req, res) => {
   await videoModel.find({}, (err, data) => {
     data = data.reverse()
     if (err) console.error(err);
-    else res.render("adminVideos", { data, displayName });
+    else res.render("adminVideos", { classes, data, displayName });
   });
 });
 
 router.get("/createVideo", checkAuthenticated, (req, res) => {
   let displayName = req.user.name.displayName;
-  res.render("adminCreateVideo", { displayName, classes });
+  res.render("adminCreateVideo", { classes, displayName });
 });
 
 router.post("/createVideo", checkAuthenticated, async (req, res) => {
@@ -142,6 +171,7 @@ router.post("/createVideo", checkAuthenticated, async (req, res) => {
     title: data.title,
     class: data.class,
     videoUrl: data.videoUrl,
+    created: Date.now
   });
 
   data = await news.save();
@@ -153,7 +183,7 @@ router.get("/video/update/:id", checkAuthenticated, async (req, res) => {
   let id = req.params.id;
 
   let data = await videoModel.findOne({ _id: id });
-  res.render("adminUpdateVideo", { data, classes, displayName });
+  res.render("adminUpdateVideo", { classes, data, displayName });
 });
 
 router.post("/video/update/:id", checkAuthenticated, async (req, res) => {

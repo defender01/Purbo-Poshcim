@@ -1,4 +1,5 @@
-@import './newsAndVideoContainers/flx-news-container', './newsAndVideoContainers/flx-vid-container';
+@import './flx-news-container';
+@import'./flx-vid-container';
 
 body {
   background-color: #eee;

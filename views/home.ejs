@@ -68,36 +68,69 @@
         <!-- navigation bar -->
         <% include ./segments/navbar %>
 
-        <!-- this part contains news -->
+        <!-- this part contains recent news -->
         <div class="flx-news-container"> 
           
           <div class="flx-cld-minor">
           </div>
-
+                  
           <div class="flx-cld-major">
-            <div class="section-title">
-              সাম্প্রতিক সংবাদ
-            </div>
-            <% for (let i=0; i< Math.min(newsData .length, 12); i++) { %>
-            <div class="flx-card">
-              <img
-                src="<%=newsData[i].photoUrl%>"
-                alt="This image is not found"
-              />
-              <% if( newsData [i].title.length > 70) { %>
-              <div class="item-title">
-                <a href="/news/<%=newsData[i]._id%>"><%= newsData[i].title.substring(0,69) + ' . . .'%></a>
-              </div>
-              <%} else{ %>
-              <div class="item-title">
-                <a href="/news/<%=newsData[i]._id%>"><%= newsData[i].title%></a>
+            <!-- latest news -->
+            <% if(newsData['সাম্প্রতিক'].length !== 0 ) { %>
+              <div class="section-title">
+                <h3>সাম্প্রতিক</h3>
+              </div>     
+              <% for (let j=0; j< Math.min(newsData['সাম্প্রতিক'] .length, 6); j++) { %>
+              <div class="flx-card">
+                <img
+                  src="<%=newsData['সাম্প্রতিক'][j].photoUrl%>"
+                  alt="This image is not found"
+                />
+                <% if( newsData['সাম্প্রতিক'] [j].title.length > 70) { %>
+                <div class="item-title">
+                  <a href="/newsDetails/<%=newsData['সাম্প্রতিক'][j]._id%>"><%= newsData['সাম্প্রতিক'][j].title.substring(0,69) + ' . . .'%></a>
+                </div>
+                <%} else{ %>
+                <div class="item-title">
+                  <a href="/newsDetails/<%=newsData['সাম্প্রতিক'][j]._id%>"><%= newsData['সাম্প্রতিক'][j].title%></a>
+                </div>
+                <% } %>
               </div>
               <% } %>
-            </div>
+              <div class="see-more">
+                <a href="/news/সাম্প্রতিক">আরও দেখুন...</a>
+              </div>
             <% } %>
-            <div class="see-more">
-              <a href="/news">আরও দেখুন...</a>
-          </div>
+
+            <!-- all other news -->
+            <% for (let i=0; i< classes.length; i++) { %>
+              <% if(newsData[classes[i]].length !== 0 ) { %>
+                <div class="section-title">
+                  <h3><%= classes[i] %></h3>
+                </div>                       
+                     
+                <% for (let j=0; j< Math.min(newsData[classes[i]] .length, 6); j++) { %>
+                <div class="flx-card">
+                  <img
+                    src="<%=newsData[classes[i]][j].photoUrl%>"
+                    alt="This image is not found"
+                  />
+                  <% if( newsData[classes[i]] [j].title.length > 70) { %>
+                  <div class="item-title">
+                    <a href="/newsDetails/<%=newsData[classes[i]][j]._id%>"><%= newsData[classes[i]][j].title.substring(0,69) + ' . . .'%></a>
+                  </div>
+                  <%} else{ %>
+                  <div class="item-title">
+                    <a href="/newsDetails/<%=newsData[classes[i]][j]._id%>"><%= newsData[classes[i]][j].title%></a>
+                  </div>
+                  <% } %>
+                </div>
+                <% } %>
+                <div class="see-more">
+                  <a href="/news/<%= classes[i] %>">আরও দেখুন...</a>
+                </div>
+              <% } %>
+            <% } %>
           </div>
 
           <div class="flx-cld-minor">

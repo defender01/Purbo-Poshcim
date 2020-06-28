@@ -15,6 +15,13 @@ const newsSchema = new mongoose.Schema({
   updated: { 
     type: Date, 
     default: Date.now
+  },
+  created: { 
+    type: Date
+  },
+  isRecent: {
+    type: Boolean,
+    default: false
   }
 });
 

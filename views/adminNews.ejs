@@ -58,7 +58,7 @@
         <div class="flx-vid-container">
           <div class="flx-cld-major">
             <div class="section-title">
-              সকল সংবাদ
+              <h3><%= nClass %></h3>
             </div>
             <br />
           </div>
@@ -85,11 +85,11 @@
                 <img src="<%= data[i].photoUrl %>" alt="This image is not found" />
                 <% if( data[i].title.length > 70) { %>
                 <div class="item-title">
-                  <a href="/admin/news/<%=data[i]._id%>"><%= data[i].title.substring(0,69) + ' . . .'%></a> 
+                  <a href="/admin/newsDetails/<%=data[i]._id%>"><%= data[i].title.substring(0,69) + ' . . .'%></a> 
                 </div>
                 <%} else{ %>
                 <div class="item-title">
-                  <a href="/admin/news/<%=data[i]._id%>"><%= data[i].title%></a> 
+                  <a href="/admin/newsDetails/<%=data[i]._id%>"><%= data[i].title%></a> 
                 </div>                
                 <% } %>
                 <div class="change-opt">

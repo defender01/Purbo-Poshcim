@@ -1,70 +1,4 @@
 @media (min-width: 1100px) {
-  .flx-vid-container {
-    display: flex;
-    justify-content: space-between;
-  }
-}
-
-.flx-vid-container .flx-cld-major {
-  font-family: "Hind Siliguri", sans-serif;
-  margin: 5px;
-  flex: 4;
-  flex-wrap: wrap;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.flx-vid-container .flx-cld-major .section-title {
-  padding: 10px;
-  text-align: center;
-  color: #2a2347;
-  width: 100%;
-  font-size: 30px;
-}
-
-.flx-vid-container .flx-cld-major .flx-card {
-  margin: 10px;
-  width: 300px;
-  height: 240px;
-  background-color: white;
-  border-radius: 5px;
-}
-
-.flx-vid-container .flx-cld-major .flx-card iframe {
-  min-width: 100%;
-  min-height: 180px;
-}
-
-.flx-vid-container .flx-cld-major .flx-card .item-title {
-  margin: 5px;
-  font-size: 15px;
-  font-weight: bold;
-}
-
-.flx-vid-container .flx-cld-major .flx-card .change-opt {
-  text-align: center;
-}
-
-.flx-vid-container .flx-cld-major .see-more {
-  margin: 5px;
-  width: 100%;
-  text-align: right;
-  font-size: 24px;
-}
-
-.flx-vid-container .flx-cld-major .see-more a:hover {
-  font-size: 25px;
-  color: #45a4fd;
-  text-decoration: underline;
-}
-
-.flx-vid-container .flx-cld-minor {
-  margin: 5px;
-  flex: 1;
-}
-
-@media (min-width: 1100px) {
   .flx-news-container {
     display: flex;
     justify-content: space-between;
@@ -73,7 +7,7 @@
 
 .flx-news-container .flx-cld-major {
   font-family: "Hind Siliguri", sans-serif;
-  margin: 5px;
+  margin: 10px;
   flex: 4;
   flex-wrap: wrap;
   display: flex;
@@ -82,8 +16,14 @@
 }
 
 .flx-news-container .flx-cld-major .section-title {
+  margin: 30px 0 30px 0;
+  background-color: #ffffff;
+  border-style: solid;
+  border-color: #4f6969;
+  border-width: 0px;
+  border-left-width: 5px;
   padding: 10px;
-  text-align: center;
+  text-align: left;
   color: #2a2347;
   width: 100%;
   font-size: 30px;
@@ -148,17 +88,87 @@
 .flx-news-container .flx-cld-major .see-more {
   margin: 5px;
   width: 100%;
-  text-align: right;
+  text-align: center;
   font-size: 24px;
 }
 
 .flx-news-container .flx-cld-major .see-more a:hover {
-  font-size: 25px;
-  color: #45a4fd;
+  color: #034a8d;
   text-decoration: underline;
 }
 
 .flx-news-container .flx-cld-minor {
+  margin: 5px;
+  flex: 1;
+}
+
+@media (min-width: 1100px) {
+  .flx-vid-container {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.flx-vid-container .flx-cld-major {
+  font-family: "Hind Siliguri", sans-serif;
+  margin: 10px;
+  flex: 4;
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flx-vid-container .flx-cld-major .section-title {
+  margin: 30px 0 30px 0;
+  background-color: #ffffff;
+  border-style: solid;
+  border-color: #4f6969;
+  border-width: 0px;
+  border-left-width: 5px;
+  padding: 10px;
+  text-align: left;
+  color: #2a2347;
+  width: 100%;
+  font-size: 30px;
+}
+
+.flx-vid-container .flx-cld-major .flx-card {
+  margin: 10px;
+  width: 300px;
+  height: 240px;
+  background-color: white;
+  border-radius: 5px;
+}
+
+.flx-vid-container .flx-cld-major .flx-card iframe {
+  min-width: 100%;
+  min-height: 180px;
+}
+
+.flx-vid-container .flx-cld-major .flx-card .item-title {
+  margin: 5px;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.flx-vid-container .flx-cld-major .flx-card .change-opt {
+  text-align: center;
+}
+
+.flx-vid-container .flx-cld-major .see-more {
+  margin: 5px;
+  width: 100%;
+  text-align: center;
+  font-size: 24px;
+}
+
+.flx-vid-container .flx-cld-major .see-more a:hover {
+  color: #034a8d;
+  text-decoration: underline;
+}
+
+.flx-vid-container .flx-cld-minor {
   margin: 5px;
   flex: 1;
 }

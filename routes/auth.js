@@ -6,8 +6,23 @@ const passport = require("passport");
 const User = require("../models/userInfo");
 const { checkNotAuthenticated } = require("../controllers/auth_helper");
 
+const classes = [
+  "বাংলাদেশ",
+  "আন্তর্জাতিক",
+  "অর্থনীতি",
+  "ক্যাম্পাস",
+  "শিক্ষা",    
+  "খেলা",   
+  "সাহিত্য",
+  "বিনোদন",
+  "উদ্ভাবন",
+  "মতামত",
+  "কর্মসূচী",
+];
+
+
 // Login Page
-router.get("/login", checkNotAuthenticated, (req, res) => res.render("login") );
+router.get("/login", checkNotAuthenticated, (req, res) => res.render("login", {classes}) );
 // Login
 router.post("/login", async (req, res, next) => {
   passport.authenticate("local", {
@@ -19,7 +34,7 @@ router.post("/login", async (req, res, next) => {
 
 // Register Page
 router.get("/register", checkNotAuthenticated, (req, res) =>
-  res.render("registration")
+  res.render("registration", {classes})
 );
 
 // Register
@@ -69,6 +84,7 @@ router.post("/register", (req, res) => {
 
   if (errors.length > 0) {
     res.render("registration", {
+      classes,
       errors,
       firstName,
       lastName,
@@ -84,6 +100,7 @@ router.post("/register", (req, res) => {
       if (user) {
         errors.push({ msg: "Email already exists" });
         res.render("registration", {
+          classes,
           errors,
           firstName,
           lastName,

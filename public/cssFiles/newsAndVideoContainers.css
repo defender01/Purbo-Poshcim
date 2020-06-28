@@ -6,8 +6,9 @@
 }
 
 .flx-news-container .flx-cld-major {
+  background-color: coral;
   font-family: "Hind Siliguri", sans-serif;
-  margin: 10px;
+  margin: 5px;
   flex: 4;
   flex-wrap: wrap;
   display: flex;
@@ -16,14 +17,9 @@
 }
 
 .flx-news-container .flx-cld-major .section-title {
-  margin: 30px 0 30px 0;
-  background-color: #ffffff;
-  border-style: solid;
-  border-color: #4f6969;
-  border-width: 0px;
-  border-left-width: 5px;
+  background-color: #aa3007;
   padding: 10px;
-  text-align: left;
+  text-align: center;
   color: #2a2347;
   width: 100%;
   font-size: 30px;
@@ -88,12 +84,13 @@
 .flx-news-container .flx-cld-major .see-more {
   margin: 5px;
   width: 100%;
-  text-align: center;
+  text-align: right;
   font-size: 24px;
 }
 
 .flx-news-container .flx-cld-major .see-more a:hover {
-  color: #034a8d;
+  font-size: 25px;
+  color: #45a4fd;
   text-decoration: underline;
 }
 
@@ -102,51 +99,68 @@
   flex: 1;
 }
 
-body {
-  background-color: #eee;
-  height: 100vh;
-}
-
-.page-container {
-  min-height: 100%;
-}
-
-.page-container .content-wrap {
-  overflow: auto;
-  padding-bottom: 270px;
-}
-
-.add-new {
-  width: 100%;
-  text-align: center;
-  padding: 10px;
-}
-
-.form-container {
-  padding: 10px  10px  10px  10px;
-  width: calc(100% - 10%);
-  margin: 20px 5% 20px 5%;
-  background-color: #e9ecef;
-}
-
-@media (min-width: 800px) {
-  .form-container {
-    width: calc(100% - 30%);
-    margin: 20px 15% 20px 15%;
+@media (min-width: 1100px) {
+  .flx-vid-container {
+    display: flex;
+    justify-content: space-between;
   }
 }
 
-.form-container .part {
-  padding: 10px;
+.flx-vid-container .flx-cld-major {
+  font-family: "Hind Siliguri", sans-serif;
+  margin: 5px;
+  flex: 4;
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.form-container .part .title {
-  font-size: 20px;
+.flx-vid-container .flx-cld-major .section-title {
+  padding: 10px;
+  text-align: center;
+  color: #2a2347;
+  width: 100%;
+  font-size: 30px;
+}
+
+.flx-vid-container .flx-cld-major .flx-card {
+  margin: 10px;
+  width: 300px;
+  height: 240px;
+  background-color: white;
+  border-radius: 5px;
+}
+
+.flx-vid-container .flx-cld-major .flx-card iframe {
+  min-width: 100%;
+  min-height: 180px;
+}
+
+.flx-vid-container .flx-cld-major .flx-card .item-title {
+  margin: 5px;
+  font-size: 15px;
   font-weight: bold;
 }
 
-.form-container .btn-container {
-  width: 100%;
-  padding: 10px;
+.flx-vid-container .flx-cld-major .flx-card .change-opt {
   text-align: center;
+}
+
+.flx-vid-container .flx-cld-major .see-more {
+  margin: 5px;
+  width: 100%;
+  text-align: right;
+  font-size: 24px;
+}
+
+.flx-vid-container .flx-cld-major .see-more a:hover {
+  font-size: 25px;
+  color: #45a4fd;
+  text-decoration: underline;
+}
+
+.flx-vid-container .flx-cld-minor {
+  margin: 5px;
+  flex: 1;
 }
