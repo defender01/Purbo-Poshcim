@@ -5,6 +5,17 @@
   .upper-body {
     height: 220px;
     background-color: rgb(79, 77, 85);
+    .info-container{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: start;
+      .info-item{
+        margin: 10px;
+        a{
+          color: #ffffff;
+        }
+      }
+    }
   }
   .lower-body {
     height: 50px;

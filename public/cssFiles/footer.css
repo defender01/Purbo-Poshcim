@@ -9,6 +9,20 @@
   background-color: #4f4d55;
 }
 
+.footer .upper-body .info-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: start;
+}
+
+.footer .upper-body .info-container .info-item {
+  margin: 10px;
+}
+
+.footer .upper-body .info-container .info-item a {
+  color: #ffffff;
+}
+
 .footer .lower-body {
   height: 50px;
   background-color: #2b2b2c;

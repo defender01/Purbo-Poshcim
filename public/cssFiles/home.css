@@ -186,3 +186,19 @@ body {
   overflow: auto;
   padding-bottom: 270px;
 }
+
+.main-container {
+  margin: 10vw 10vw 10vw 10vw;
+}
+
+.main-container h1, .main-container h3, .main-container h2 {
+  margin: 20px 0 30px 0;
+}
+
+.main-container p {
+  font-size: 20px;
+}
+
+.main-container li {
+  font-size: 20px;
+}
