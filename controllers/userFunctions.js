@@ -68,9 +68,6 @@ async function getNewsDetails (req, res) {
         path: "newsDetails",
         });
 
-    let timeObj =converToBdTime(data.created)  
-    console.log({timeObj})
-
     res.render("newsDetails", { classes, data });
 }
 function converToBdTime(timeOb){

@@ -1,4 +1,22 @@
-const { newsModel } = require("../models/news")
+const { newsModel, newsDetailsModel } = require("../models/news");
+const videoModel = require("../models/video");
+
+const classes = [
+  "বাংলাদেশ",
+  "আন্তর্জাতিক",
+  "অর্থনীতি",     
+  "সাহিত্য",
+  "ক্যাম্পাস",
+  "শিক্ষা",    
+  "খেলা",
+  "বিজ্ঞান ও প্রযুক্তি",
+  "বিনোদন",
+  "উদ্ভাবন",
+  "মতামত",
+  "কর্মসূচী",
+];
+
+
 
 function converToBdTime(createTime){
     return {
@@ -32,7 +50,6 @@ function mapToBdNumber(n){
 }
 
 function getBdDate(createTime){
-    console.log(createTime)
     let timeObj = converToBdTime(createTime)
     return timeObj.day+'-'+timeObj.month+'-'+timeObj.year
 }

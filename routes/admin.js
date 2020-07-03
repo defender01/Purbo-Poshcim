@@ -2,8 +2,7 @@ const express = require("express");
 const router = express.Router();
 const mongoose = require("mongoose");
 
-const { newsModel, newsDetailsModel } = require("../models/news");
-const videoModel = require("../models/video");
+
 
 const {
   converToBdTime,
@@ -25,20 +24,6 @@ const {
   deleteVideo,
 }=require('../controllers/adminFunctions')
 
-const classes = [
-  "বাংলাদেশ",
-  "আন্তর্জাতিক",
-  "অর্থনীতি",     
-  "সাহিত্য",
-  "ক্যাম্পাস",
-  "শিক্ষা",    
-  "খেলা",
-  "বিজ্ঞান ও প্রযুক্তি",
-  "বিনোদন",
-  "উদ্ভাবন",
-  "মতামত",
-  "কর্মসূচী",
-];
 
 const {
   checkNotAuthenticated,
