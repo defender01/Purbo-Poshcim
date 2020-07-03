@@ -45,6 +45,10 @@ router.get('/privacyPolicy', (req, res)=>{
 router.get('/contactUs', (req, res)=>{
   res.render('contactUs', {classes})
 })
+router.get('/ad', (req, res)=>{
+  res.render('ad', {classes})
+})
+
 
 router.get("/test", (req, res) => {
   res.render("test", {classes});
