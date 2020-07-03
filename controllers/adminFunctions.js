@@ -1,3 +1,5 @@
+
+const mongoose = require("mongoose");
 const { newsModel, newsDetailsModel } = require("../models/news");
 const videoModel = require("../models/video");
 
