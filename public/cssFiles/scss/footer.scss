@@ -1,33 +1,50 @@
 .footer {
   position: relative;
-  height: 270px;
+  min-height: 270px;
   margin-top: -270px;
   .upper-body {
-    height: 220px;
+    min-height: 220px;
     background-color: rgb(79, 77, 85);
-    .info-container{
+    .info-container {
+      margin: 0 10vw 0 10vw;
       display: flex;
       flex-wrap: wrap;
       justify-content: start;
-      .info-item{
+      .info-item {
         margin: 10px;
-        a{
+        a {
           color: #ffffff;
         }
       }
-      .adContact{
+      .adContact {
         margin: auto;
         width: 100%;
         text-align: center;
         font-size: 22px;
-        a{
+        a {
           color: #c0ae0e;
-        }        
+        }
+      }
+    }
+    .link-container {
+      margin: 0 10vw 0 10vw;
+      padding: 10px;
+      @media (min-width: 1000px) {
+        display: flex;
+      }
+      .link-row {
+        flex: 1;
+        .link {
+          margin: 5px;
+          a {
+            color: rgb(255, 255, 255);
+          }
+        }
       }
     }
   }
   .lower-body {
-    height: 50px;
+    min-height: 50px;
     background-color: rgb(43, 43, 44);
   }
 }

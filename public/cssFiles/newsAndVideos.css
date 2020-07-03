@@ -225,3 +225,8 @@ body {
 .admin-cont .flx-card {
   min-height: 260px;
 }
+
+.testDiv {
+  margin-bottom: 50px;
+  background-color: #dd3f3f;
+}

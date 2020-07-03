@@ -1,15 +1,16 @@
 .footer {
   position: relative;
-  height: 270px;
+  min-height: 270px;
   margin-top: -270px;
 }
 
 .footer .upper-body {
-  height: 220px;
+  min-height: 220px;
   background-color: #4f4d55;
 }
 
 .footer .upper-body .info-container {
+  margin: 0 10vw 0 10vw;
   display: flex;
   flex-wrap: wrap;
   justify-content: start;
@@ -34,7 +35,30 @@
   color: #c0ae0e;
 }
 
+.footer .upper-body .link-container {
+  margin: 0 10vw 0 10vw;
+  padding: 10px;
+}
+
+@media (min-width: 1000px) {
+  .footer .upper-body .link-container {
+    display: flex;
+  }
+}
+
+.footer .upper-body .link-container .link-row {
+  flex: 1;
+}
+
+.footer .upper-body .link-container .link-row .link {
+  margin: 5px;
+}
+
+.footer .upper-body .link-container .link-row .link a {
+  color: white;
+}
+
 .footer .lower-body {
-  height: 50px;
+  min-height: 50px;
   background-color: #2b2b2c;
 }

@@ -1,7 +1,37 @@
 <div class="footer-container">
     <div class="footer">
         <div class="upper-body">
+            <div class="link-container">
+                <div class="link-row">
+                    <div class="link">
+                        <a href="/videos %>"> ভিডিও </a>
+                    </div>
+                    <% for (let i=0; i< 4; i++) { %>
+                    <div class="link">
+                        <a href="/news/<%= classes[i] %>"> <%= classes[i] %> </a>
+                    </div>
+                    <% } %>
+                </div>
+                <div class="link-row">
+                    <% for (let i=4; i< 8; i++) { %>
+                        <div class="link">
+                            <a href="/news/<%= classes[i] %>"> <%= classes[i] %> </a>
+                        </div>
+                    <% } %>
+                </div>
+                <div class="link-row">
+                    <% for (let i=8; i< classes.length; i++) { %>
+                        <div class="link">
+                            <a href="/news/<%= classes[i] %>"> <%= classes[i] %> </a>
+                        </div>
+                    <% } %>
+                </div>
+            </div>
+            <!-- website info links -->
             <div class="info-container">
+                <div class="adContact">
+                    <a href="/ad">Contact for Advertisement</a>
+                </div>
                 <div class="info-item">
                     <a href="/aboutUs">About Us</a>
                 </div>                
@@ -13,10 +43,7 @@
                 </div>
                 <div class="info-item">
                     <a href="/contactUs">Contact Us</a>
-                </div>
-                <div class="adContact">
-                    <a href="/ad">Contact for Advertisement</a>
-                </div>
+                </div>                
             </div>
         </div>
         <div class="lower-body">
