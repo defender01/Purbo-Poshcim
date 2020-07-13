@@ -67,9 +67,9 @@
                     <% for (let i=0; i< data.length; i++) { %>
                         <div class="flx-card">
                             <img src="<%=data[i].photoUrl%>" alt="This image is not found">
-                            <% if( data[i].title.length > 70) { %>
+                            <% if( data[i].title.length > 60) { %>
                             <div class="item-title">
-                                <a href="/newsDetails/<%=data[i]._id%>"><%= data[i].title.substring(0,69) + ' . . .'%></a>                                
+                                <a href="/newsDetails/<%=data[i]._id%>"><%= data[i].title.substring(0,59) + ' . . .'%></a>                                
                             </div>
                             <%} else{ %>
                             <div class="item-title">

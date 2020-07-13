@@ -45,10 +45,17 @@
       <div class="content-wrap">
         <!-- navigation bar -->
         <% include ./segments/navbar %>
-        <textarea name="editor1"></textarea>
-        <script>
-                CKEDITOR.replace( 'editor1' );
-        </script>
+       
+        <input id='rawUrl' type="text">
+        <button onclick="urlToEmbed()">Send</button>
+        <p id='embedUrl'></p>
+        
+        <div style="width: 300px; height: 200px;">
+          <blockquote class="embedly-card"><h4><a href="https://photos.app.goo.gl/BAyijkykn8EiWCMt5">New photo by Rahat Rizvi Rahman</a></h4><p>null</p></blockquote>
+          <script async src="//cdn.embedly.com/widgets/platform.js" charset="UTF-8"></script>
+  
+        </div>
+        
       </div>
         
     </div>
