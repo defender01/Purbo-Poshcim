@@ -83,6 +83,7 @@
               <% for (let j=0; j< Math.min(newsData['সাম্প্রতিক'] .length, 6); j++) { %>
               <div class="flx-card">
                 <img
+                  class="news_image"
                   src="<%=newsData['সাম্প্রতিক'][j].photoUrl%>"
                   alt="This image is not found"
                 />
@@ -112,6 +113,7 @@
                 <% for (let j=0; j< Math.min(newsData[classes[i]] .length, 6); j++) { %>
                 <div class="flx-card">
                   <img
+                    class="news_image"
                     src="<%=newsData[classes[i]][j].photoUrl%>"
                     alt="This image is not found"
                   />
@@ -197,5 +199,15 @@
       integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
       crossorigin="anonymous"
     ></script>
+
+    <script>
+      $(document).ready(function()
+      {
+          $(".news_image").on("error", function(){
+            console.log("came")
+              $(this).attr('src', './assets/images/purboposhcim_cover.jpg');
+          });
+      });
+    </script>
   </body>
 </html>

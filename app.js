@@ -69,7 +69,7 @@ app.use("/resources", express.static(__dirname + "/resources"))
 
 async function increaseVisit(req, res, next){
    let data = await statsModel.findOne({})
-   console.log({data})
+  //  console.log({data})
    let count = data.visit+1
    await statsModel.findOneAndUpdate(
      {},
@@ -78,7 +78,7 @@ async function increaseVisit(req, res, next){
      }
    )
    data = await statsModel.findOne({})
-   console.log({data})
+  //  console.log({data})
   next()
 }
 

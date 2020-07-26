@@ -49,6 +49,14 @@ router.get('/ad', (req, res)=>{
   res.render('ad', {classes})
 })
 
+router.get('/staff', (req, res) => {
+  let staffs = {
+    names: [ 'পলাশ দেব রায়','রায়হান শেইখ', 'সাজ্জাদ হোসাইন', 'মোঃ আবু তালহা', 'মোঃ সাগর ফকির', 'ইমামুল ইসলাম', 'পবিত্র পাল', 'আফরুনা সুপ্তি', 'তানভীর কায়সার'],
+    imgFiles: [ 'Palash_Deb_Ray.jpg', 'Rayhan_Sheik.jpg', 'Sazzad_Hossain.jpeg', 'Md_Abu_Talha.jpg', 'Md_Sagar_Fokir.jpg', 'Imamul_Islam.jpg', 'Pabitra_pal.jpg', 'Afruna_Supti.jpg', 'Tanveer_Kaiser.jpeg'],
+    roles: ['সাংবাদিক','সাংবাদিক', 'সাংবাদিক', 'সাংবাদিক', 'সাংবাদিক', 'সাংবাদিক', 'সাংবাদিক', 'উপস্থাপক', 'উপস্থাপক' ]
+  }
+  res.render('staff', {classes,staffs})
+})
 
 router.get("/test", (req, res) => {
   res.render("test", {classes});
