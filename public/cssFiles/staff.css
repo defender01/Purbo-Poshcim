@@ -34,7 +34,6 @@ body {
 }
 
 .main-container .staff-container {
-  padding: 10px;
   flex-wrap: wrap;
   display: flex;
   justify-content: center;
@@ -43,7 +42,7 @@ body {
 .main-container .staff-container .staff {
   background-image: linear-gradient(to bottom, #d0dbf3, white);
   margin: 10px;
-  width: 400px;
+  width: 380px;
   height: 530px;
   border-radius: 4px;
   box-shadow: 0 0 2px rgba(98, 97, 99, 0.76);

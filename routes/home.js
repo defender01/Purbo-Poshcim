@@ -51,9 +51,9 @@ router.get('/ad', (req, res)=>{
 
 router.get('/staff', (req, res) => {
   let staffs = {
-    names: [ 'পলাশ দেব রায়','রায়হান শেইখ', 'সাজ্জাদ হোসাইন', 'মোঃ আবু তালহা', 'মোঃ সাগর ফকির', 'ইমামুল ইসলাম', 'পবিত্র পাল', 'আফরুনা সুপ্তি', 'তানভীর কায়সার'],
-    imgFiles: [ 'Palash_Deb_Ray.jpg', 'Rayhan_Sheik.jpg', 'Sazzad_Hossain.jpeg', 'Md_Abu_Talha.jpg', 'Md_Sagar_Fokir.jpg', 'Imamul_Islam.jpg', 'Pabitra_pal.jpg', 'Afruna_Supti.jpg', 'Tanveer_Kaiser.jpeg'],
-    roles: ['সাংবাদিক','সাংবাদিক', 'সাংবাদিক', 'সাংবাদিক', 'সাংবাদিক', 'সাংবাদিক', 'সাংবাদিক', 'উপস্থাপক', 'উপস্থাপক' ]
+    names: [ 'ফৌজিয়া আহমেদ', 'পলাশ দেব রায়','রায়হান শেইখ', 'সাজ্জাদ হোসাইন', 'মোঃ আবু তালহা', 'মোঃ সাগর ফকির', 'ইমামুল ইসলাম', 'পবিত্র পাল', 'আফরুনা সুপ্তি', 'তানভীর কায়সার', 'রোমানা আক্তার শান্তা'],
+    imgFiles: ['Fouzia_Ahmed.jpg', 'Palash_Deb_Ray.jpg', 'Rayhan_Sheik.jpg', 'Sazzad_Hossain.jpeg', 'Md_Abu_Talha.jpg', 'Md_Sagar_Fokir.jpg', 'Imamul_Islam.jpg', 'Pabitra_pal.jpg', 'Afruna_Supti.jpg', 'Tanveer_Kaiser.jpeg', 'Romana_Aktar_Shanta.jpg'],
+    roles: ['সম্পাদক', 'সাংবাদিক','সাংবাদিক', 'সাংবাদিক', 'সাংবাদিক', 'সাংবাদিক', 'সাংবাদিক', 'সাংবাদিক', 'উপস্থাপক', 'উপস্থাপক', 'উপস্থাপক' ]
   }
   res.render('staff', {classes,staffs})
 })
