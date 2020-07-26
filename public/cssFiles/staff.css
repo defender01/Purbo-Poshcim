@@ -65,6 +65,13 @@ body {
   border-radius: 1000px;
 }
 
+@media (max-width: 600px) {
+  .main-container .staff-container .staff .img-container .img-holder {
+    width: 200px;
+    height: 200px;
+  }
+}
+
 .main-container .staff-container .staff .img-container .img-holder img {
   background-color: blue;
   border-radius: 1000px;
@@ -79,7 +86,19 @@ body {
   color: #662511;
 }
 
+@media (max-width: 600px) {
+  .main-container .staff-container .staff .name {
+    font-size: 22px;
+  }
+}
+
 .main-container .staff-container .staff .role {
   font-size: 22px;
   text-align: center;
+}
+
+@media (max-width: 600px) {
+  .main-container .staff-container .staff .role {
+    font-size: 16px;
+  }
 }

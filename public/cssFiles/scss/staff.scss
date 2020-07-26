@@ -51,6 +51,10 @@ body {
           margin: auto;
           width: 300px;
           height: 300px;
+          @media (max-width:600px){
+            width: 200px;
+            height: 200px;
+          }
           border-radius: 30px;
           border: 8px solid rgb(252, 30, 30);
           border-radius: 1000px;
@@ -65,11 +69,17 @@ body {
       }
       .name{
         font-size: 30px;
+        @media (max-width:600px){
+          font-size: 22px;
+        }
         text-align: center;
         color: $title-color;
       }
       .role{
         font-size: 22px;
+        @media (max-width:600px){
+          font-size: 16px;
+        }
         text-align: center;
       }
     }
