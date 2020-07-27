@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Hind+Siliguri&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Nanum+Gothic&family=Poppins&family=Source+Sans+Pro&display=swap");
 body {
   background-color: #eee;
   height: 100vh;
@@ -80,6 +81,12 @@ body {
 }
 
 .main-container .staff-container .staff .role {
+  font-size: 22px;
+  text-align: center;
+}
+
+.main-container .staff-container .staff .mail {
+  font-style: Poppins;
   font-size: 22px;
   text-align: center;
 }
