@@ -433,6 +433,22 @@
   }
 }
 
+html {
+  font-size: 100%;
+}
+
+@media (max-width: 1000px) {
+  html {
+    font-size: 85%;
+  }
+}
+
+@media (max-width: 600px) {
+  html {
+    font-size: 75%;
+  }
+}
+
 body {
   background-color: #eee;
   height: 100vh;

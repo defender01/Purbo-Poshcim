@@ -1,6 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Hind+Siliguri&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Nanum+Gothic&family=Poppins&family=Source+Sans+Pro&display=swap');
 $title-color: #662511;
+
+html{
+  font-size: 100%;
+  @media (max-width:1000px){
+    font-size: 85%;
+  }
+  @media (max-width:600px){
+    font-size: 75%;
+  }
+}
 body {
   background-color: #eee;
   height: 100vh;

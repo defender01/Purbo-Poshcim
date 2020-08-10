@@ -1,5 +1,21 @@
 @import url("https://fonts.googleapis.com/css2?family=Hind+Siliguri&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Nanum+Gothic&family=Poppins&family=Source+Sans+Pro&display=swap");
+html {
+  font-size: 100%;
+}
+
+@media (max-width: 1000px) {
+  html {
+    font-size: 85%;
+  }
+}
+
+@media (max-width: 600px) {
+  html {
+    font-size: 75%;
+  }
+}
+
 body {
   background-color: #eee;
   height: 100vh;

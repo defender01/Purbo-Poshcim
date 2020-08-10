@@ -1,27 +1,35 @@
-@import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri&display=swap');
-@import'./flx-vid-container';
+@import url("https://fonts.googleapis.com/css2?family=Hind+Siliguri&display=swap");
+@import "./flx-vid-container";
 
 $font-color: rgb(0, 0, 0);
-
+html {
+  font-size: 100%;
+  @media (max-width: 1000px) {
+    font-size: 85%;
+  }
+  @media (max-width: 600px) {
+    font-size: 75%;
+  }
+}
 body {
   background-color: #eee;
   height: 100vh;
 }
 .page-container {
   min-height: 100%;
-  .content-wrap{
+  .content-wrap {
     overflow: auto;
     padding-bottom: 270px;
   }
 }
 
-main{
+main {
   margin: 20px 6%;
-  @media(max-width: 1200px){
+  @media (max-width: 1200px) {
     margin-left: 10px;
     margin-right: 10px;
   }
-  @media(max-width: 1000px){
+  @media (max-width: 1000px) {
     margin-left: 5px;
     margin-right: 5px;
   }
@@ -100,30 +108,29 @@ main{
       }
     }
 
-
     // for general news sections
     .general {
       padding: 1rem;
       width: 100%;
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       grid-column-gap: 1rem;
       grid-row-gap: 1rem;
 
-      .sec-title{
+      .sec-title {
         -moz-box-shadow: 0 0 3px #ccc;
         -webkit-box-shadow: 0 0 3px #ccc;
         box-shadow: 0 0 3px #ccc;
 
-        grid-column: 1/5;
+        grid-column: 1/4;
         grid-row: 1/2;
-        
+
         @media (max-width: 1400px) {
           grid-column: 1/4;
-        }  
+        }
         @media (max-width: 1000px) {
           grid-column: 1/3;
-        }        
+        }
         @media (max-width: 700px) {
           grid-column: 1/2;
         }
@@ -134,34 +141,31 @@ main{
         border-color: #4f6969;
         border-width: 0px;
         border-left-width: 5px;
-        padding: 10px;        
+        padding: 10px;
         color: rgb(42, 35, 71);
-        width: 100%;        
+        width: 100%;
         display: flex;
 
-        .title{
+        .title {
           flex: 1;
           text-align: left;
           font-size: 1.5rem;
         }
-        .see-more{
+        .see-more {
           margin-top: 5px;
           width: 200px;
           font-size: 1.2rem;
-          a{
+          a {
             color: #851515;
           }
         }
-        
-
-      }    
-
+      }
 
       .news-card {
         // text-align: start;
         background-color: white;
         min-height: 100px;
-        display: flex; 
+        display: flex;
         align-items: center;
         // shadow around whole div
         -moz-box-shadow: 0 0 3px #ccc;
@@ -181,24 +185,24 @@ main{
             }
           }
           .item-title {
-            font-size: .8rem;
+            font-size: 0.8rem;
             flex: 1;
             margin: 10px 10px 10px 0;
             display: flex;
             flex-direction: column;
-            a{
+            a {
               flex: 1;
               color: $font-color;
             }
-            .date-cont{
-              font-size: .8rem;
+            .date-cont {
+              font-size: 0.8rem;
               color: #93979a;
             }
           }
         }
       }
 
-      .main-news{
+      .main-news {
         grid-column: 1/3;
         grid-row: 2/5;
         @media (max-width: 1000px) {
@@ -216,7 +220,7 @@ main{
           -webkit-box-shadow: 0 0 3px #ccc;
           box-shadow: 0 0 3px #ccc;
           padding: 5px;
-          
+
           .news-cont {
             margin: 10px;
             width: 100%;
@@ -226,13 +230,13 @@ main{
             flex-direction: column;
             .img-cont {
               position: relative;
-              width: 100%;         
+              width: 100%;
               padding-bottom: 65%;
               display: flex;
               img {
                 position: absolute;
                 width: 100%;
-                height: 100%;;
+                height: 100%;
                 // display: none;
               }
             }
@@ -242,11 +246,11 @@ main{
               margin: 10px 10px 10px 0;
               display: flex;
               flex-direction: column;
-              a{
+              a {
                 flex: 1;
                 color: $font-color;
               }
-              .date-cont{
+              .date-cont {
                 font-size: 1rem;
                 color: #93979a;
               }
@@ -258,39 +262,39 @@ main{
   }
   .flx-cld-minor {
     flex: 1;
-    .fb-page-cont{
+    .fb-page-cont {
+      // width: 300px;
       margin: 10px;
       margin-top: 15px;
-      background-color: white;
-      .sec-title{
+      background-color: rgb(255, 255, 255);
+      .sec-title {
         -moz-box-shadow: 0 0 3px #ccc;
         -webkit-box-shadow: 0 0 3px #ccc;
         box-shadow: 0 0 3px #ccc;
 
-      
         min-height: 40px;
         background-color: #ffffff;
         border-style: solid;
         border-color: #4f6969;
         border-width: 0px;
         border-left-width: 5px;
-        padding: 10px;        
+        padding: 10px;
         color: rgb(42, 35, 71);
-        width: 100%;    
+        width: 100%;
         text-align: left;
-        font-size: 1.5rem;       
-
-      } 
-      .holder{
+        font-size: 1.5rem;
+      }
+      .holder {
         margin: 10px;
         height: 220px;
-        @media (min-width:1400px){
+        @media (min-width: 1400px) {
           text-align: center;
         }
-      }     
+      }
     }
   }
 }
+
 .flx-news-container-old {
   font-family: "Hind Siliguri", sans-serif;
   @media (min-width: 1200px) {
@@ -321,7 +325,7 @@ main{
         -webkit-box-shadow: 0 0 3px #ccc;
         box-shadow: 0 0 3px #ccc;
         padding: 5px;
-        
+
         .news-cont {
           margin: 10px;
           width: 100%;
@@ -331,13 +335,13 @@ main{
           flex-direction: column;
           .img-cont {
             position: relative;
-            width: 100%;         
+            width: 100%;
             padding-bottom: 65%;
             display: flex;
             img {
               position: absolute;
               width: 100%;
-              height: 100%;;
+              height: 100%;
               // display: none;
             }
           }
@@ -347,11 +351,11 @@ main{
             margin: 10px 10px 10px 0;
             display: flex;
             flex-direction: column;
-            a{
+            a {
               flex: 1;
               color: $font-color;
             }
-            .date-cont{
+            .date-cont {
               font-size: 1rem;
               color: #93979a;
             }
@@ -362,40 +366,37 @@ main{
   }
   .flx-cld-minor {
     flex: 1;
-    .fb-page-cont{
+    .fb-page-cont {
       margin: 10px;
       margin-top: 15px;
       background-color: white;
-      .sec-title{
+      .sec-title {
         -moz-box-shadow: 0 0 3px #ccc;
         -webkit-box-shadow: 0 0 3px #ccc;
         box-shadow: 0 0 3px #ccc;
 
-      
         min-height: 40px;
         background-color: #ffffff;
         border-style: solid;
         border-color: #4f6969;
         border-width: 0px;
         border-left-width: 5px;
-        padding: 10px;        
+        padding: 10px;
         color: rgb(42, 35, 71);
-        width: 100%;    
+        width: 100%;
         text-align: left;
-        font-size: 1.5rem;       
-
-      } 
-      .holder{
+        font-size: 1.5rem;
+      }
+      .holder {
         margin: 10px;
         height: 220px;
-        @media (min-width:1400px){
+        @media (min-width: 1400px) {
           text-align: center;
         }
-      }     
+      }
     }
   }
 }
-
 
 .add-new {
   width: 100%;
@@ -429,7 +430,7 @@ main{
   }
 }
 
-.admin-cont{
+.admin-cont {
   .flx-card {
     min-height: 260px;
   }
