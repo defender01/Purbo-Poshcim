@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+     <!-- Global site tag (gtag.js) - Google Analytics -->
+     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-169815710-1"></script>
+     <script>
+       window.dataLayer = window.dataLayer || [];
+       function gtag(){dataLayer.push(arguments);}
+       gtag('js', new Date());
+ 
+       gtag('config', 'UA-169815710-1');
+     </script>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- open graph protocol tobe recognized by facebook-->
+    <meta property="og:title" content="পূর্ব পশ্চিম" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="http://www.purboposhcim.com/" />
+    <meta property="og:image" content="https://lh3.googleusercontent.com/XNDFk3-aaY5pMZZsaO3HuLVXo_tu5EH0Yn9SJZLgQiJAU2QuNtydYejHHVj3cQO9ca_rTku7HOJzrIcRu-kRRU-_ydY-o_KKFNHksysy1hOj_EEtNTx3Zj_47-sHLXcMTs9tbFto=w600-h315-p-k">
+    <meta property="og:description" content="" />
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="fb:app_id" content="1182939572060897">
+
+    <meta name="google-site-verification" content="07c-4A5YqRT9nWhJpg2XI-kzYDmmJB3-8rLVYlL2_XA" />
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <!-- google fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Courier+Prime&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Hind Siliguri"
+    />
+    <!-- google adsense -->
+    <script data-ad-client="ca-pub-4266924221770969" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+    
+    <link rel="stylesheet" href="/assets/cssFiles/header.css" />
+    <!-- stylesheet for navbar -->
+    <link rel="stylesheet" href="/assets/cssFiles/navbar.css" />
+    <link rel="stylesheet" href="/assets/cssFiles/registration.css" />
+    <link rel="stylesheet" href="/assets/cssFiles/footer.css" />
+
+    <title>পূর্ব পশ্চিম</title>
+
+   
+  </head>
+
+  <body>
+    <div class="page-container">
+      <div class="content-wrap">
+        <% include ./segments/header%>
+        <!-- navigation bar -->
+        <% include ./segments/navbar %>
+
+        <div class="form-container">
+            <div class="title">রেজিস্ট্রেশনের তথ্য দিন</div>
+            <div class="field">
+                <div class="tag">
+                    নাম
+                </div>
+                <div class="input" >
+                    <input type="text" class="form-control" name="fullName" placeholder="আপনার নাম*" required>
+                </div>
+            </div>  
+            <div class="field">
+                <div class="tag">
+                    ইমেইল
+                </div>
+                <div class="input">
+                    <input type="email" class="form-control" name="email" placeholder="ইমেইল এড্রেস*" required>
+                </div>
+            </div> 
+            <div class="field">
+                <div class="tag">
+                    মোবাইল নং
+                </div>
+                <div class="input">
+                    <input type="text" class="form-control" name="mobileNo" placeholder="আপনার মোবাইল নং*" required>
+                </div>
+            </div> 
+            <div class="field">
+                <div class="tag">
+                    পাসওয়ার্ড
+                </div>
+                <div class="input">
+                    <input type="password" class="form-control" name="password1" required>
+                </div>
+            </div> 
+            <div class="field">
+                <div class="tag">
+                    পাসওয়ার্ড
+                </div>
+                <div class="input">
+                    <input type="password" class="form-control" name="password2" required>
+                </div>
+            </div> 
+            <div class="field">
+                <div class="tag">
+                    ছবি
+                </div>
+                <div class="input">
+                    <input type="file" class="form-control-file" name="profilePic" required>
+                </div>
+            </div> 
+        </div>
+
+       
+      </div>
+    </div>
+
+    <% include ./segments/footer.ejs %>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.js"
+      integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+      crossorigin="anonymous"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

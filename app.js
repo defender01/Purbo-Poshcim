@@ -16,7 +16,9 @@ app.use(express.urlencoded({ extended: false }));
 
 require("dotenv").config()
 // Passport Config
-require('./controllers/passport')(passport)
+require('./controllers/passport').passportForAdmin(passport)
+require('./controllers/passport').passportForBlogger(passport)
+require('./controllers/passport').passportForAdmin(passport)
 
 // parse application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: false }))

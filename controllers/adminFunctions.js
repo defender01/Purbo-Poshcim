@@ -115,6 +115,8 @@ async function getHome (req, res){
   async function postCreateNews (req, res){
     let data = req.body;
     // res.send(data)
+    let timeNow = Date.now()
+    let timeOb =converToBdTime(timeNow)
     let details = new newsDetailsModel({
       _id: new mongoose.Types.ObjectId(),
       details: data.newsDetails
@@ -125,9 +127,17 @@ async function getHome (req, res){
       title: data.title,
       class: data.class,
       isRecent: data.recent=='checked',
+      bdFormatTime:{
+        year: timeOb.year,
+        month: timeOb.month,
+        day: timeOb.day,
+        hour: timeOb.hour,
+        minute: timeOb.minute,
+        timeString: timeOb.day+'-'+timeOb.month+'-'+timeOb.year
+       },
       newsDetails: details._id,
       photoUrl: data.photoUrl,
-      created: Date.now()
+      updated: timeNow
     });
   
     await details.save();
@@ -151,7 +161,6 @@ async function getHome (req, res){
 
   async function postUpdateNews (req, res) {  
     let data = req.body;
-    console.log(data.recent=='checked')
     let displayName = req.user.name.displayName;
     let id = req.params.id;
     let dId = req.params.dId;

@@ -30,6 +30,13 @@ const UserSchema = new mongoose.Schema({
   gender: {
     type: String
   },
+  role:{
+    type: String
+  },
+  verified:{
+    type: Boolean,
+    default: true
+  },
   updated: { 
     type: Date, 
     default: Date.now

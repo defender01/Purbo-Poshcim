@@ -48,44 +48,112 @@
 </head>
 
 <body>
+   <!-- for fb page -->
+   <div id="fb-root"></div>
+   <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v8.0&appId=1182939572060897&autoLogAppEvents=1" nonce="hU56tX9u"></script>
+
     <div class="page-container">
         <div class="content-wrap">
-             <% include ./segments/header%>
-            <!-- navigation bar -->
-            <% include ./segments/navbar %>
-            <!-- this part contains news -->
-            
-            <div class="flx-news-container">
-                
-                <div class="flx-cld-minor">
-                </div>
-
-                <div class="flx-cld-major">
-                    <div class="section-title">
-                        <h3><%= nClass %></h3>
+          <% include ./segments/header%>
+          <!-- navigation bar -->
+          <% include ./segments/navbar %>
+  
+          <main>
+            <% if(data.length !== 0 ) { %>
+              <div class="flx-news-container"> 
+                <div class="flx-cld-major"> 
+                  <div class="general">
+                    <div class="sec-title">
+                      <div class="title">
+                        <%= nClass %>
+                      </div>
                     </div>
-                    <% for (let i=0; i< data.length; i++) { %>
-                        <div class="flx-card">
-                            <img src="<%=data[i].photoUrl%>" alt="This image is not found">
-                            <% if( data[i].title.length > 60) { %>
-                            <div class="item-title">
-                                <a href="/newsDetails/<%=data[i]._id%>"><%= data[i].title.substring(0,59) + ' . . .'%></a>                                
+      
+                    <div class="main-news">
+                      <div class="news-card">         
+                        <div class="news-cont">
+                          <div class="img-cont">
+                            <img class="news_image"
+                              src="<%=data[0].photoUrl%>"
+                              alt="This image is not found"
+                            />
+                          </div>                        
+                          <div class="item-title">
+                            <a href="/newsDetails/<%=data[0]._id%>"><%= data[0].title%></a>        
+                            <div class="date-cont">
+                              <%= data[0].bdFormatTime.timeString%>
                             </div>
-                            <%} else{ %>
-                            <div class="item-title">
-                                <a href="/newsDetails/<%=data[i]._id%>"><%= data[i].title%></a>                              
+                          </div> 
+                          
+                        </div>      
+                      </div>                      
+                    </div>
+                   
+                    <% for (let i=1; i< Math.min(data .length, 11); i++) { %>
+                      <div class="news-card">         
+                        <div class="news-cont">
+                          <div class="img-cont">
+                            <img class="news_image"
+                              src="<%=data[i].photoUrl%>"
+                              alt="This image is not found"
+                            />
+                          </div>                        
+                          <div class="item-title">
+                            <a href="/newsDetails/<%=data[i]._id%>"><%= data[i].title%></a>        
+                            <div class="date-cont">
+                              <%= data[i].bdFormatTime.timeString%>
                             </div>
-                            <% } %>
-                        </div>
+                          </div> 
+                          
+                        </div>      
+                      </div>
                     <% } %>
+                  </div>  
+                  
                 </div>
-
                 <div class="flx-cld-minor">
+                  <div class="fb-page-cont">
+                    <div class="sec-title">
+                      ফেইসবুক পেইজ
+                    </div>
+                    <div class="holder">
+                      <div class="fb-page" data-href="https://www.facebook.com/purboposhcimnews/" data-tabs="timeline" data-width="" data-height="210" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/purboposhcimnews/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/purboposhcimnews/">purboposhcim.com</a></blockquote></div>
+                    </div>                
+                  </div>
+                </div> 
+              </div>
+
+              <div class="flx-news-container-old"> 
+                <div class="flx-cld-major"> 
+                  <div class="general">
+      
+                    <% for (let i=11; i< data .length; i++) { %>
+                      <div class="news-card">         
+                        <div class="news-cont">
+                          <div class="img-cont">
+                            <img class="news_image"
+                              src="<%=data[i].photoUrl%>"
+                              alt="This image is not found"
+                            />
+                          </div>                        
+                          <div class="item-title">
+                            <a href="/newsDetails/<%=data[i]._id%>"><%= data[i].title%></a>        
+                            <div class="date-cont">
+                              <%= data[i].bdFormatTime.timeString%>
+                            </div>
+                          </div> 
+                          
+                        </div>      
+                      </div>     
+                    <% } %>
+                  </div>  
+                  
                 </div>
-                
-            </div>
+              </div>
+            <% } %>
+          </main>
         </div>
-    </div>
+      </div>
 
     <% include ./segments/footer.ejs %>
 

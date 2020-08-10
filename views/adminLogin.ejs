@@ -15,8 +15,6 @@
     <meta property="og:image:height" content="630">
     <meta property="fb:app_id" content="1182939572060897">
 
-	<link rel="stylesheet" href="/assets/cssFiles/signin.css">
-
 	<!-- google adsense -->
     <!-- <script data-ad-client="ca-pub-4266924221770969" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> -->
 
@@ -29,12 +27,12 @@
     />
 
 	<link rel="stylesheet" href="/assets/cssFiles/header.css" />
-	<link rel="stylesheet" href="/assets/cssFiles/registration.css" />
+	<link rel="stylesheet" href="/assets/cssFiles/signin.css">
 	<!-- stylesheet for navbar -->
 	<link rel="stylesheet" href="/assets/cssFiles/navbar.css">
 	<link rel="stylesheet" href="/assets/cssFiles/footer.css">
 
-	<title>লগ ইন - পূর্ব পশ্চিম</title>
+	<title>এডমিন লগ ইন - পূর্ব পশ্চিম</title>
 	
 	<!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-169815710-1"></script>
@@ -57,7 +55,7 @@
 			<div class = "container">
 				<div class="wrapper">
 					<% include ./segments/messages %>
-					<form action="/auth/login" method="post" name="Login_Form" class="form-signin">       
+					<form action="/auth/login/admin" method="post" name="Login_Form" class="form-signin">       
 						<h3 class="form-signin-heading">Welcome! Please Sign In</h3>
 						
 						<input type="text" class="form-control" name="emailOrPhone" placeholder="email" required="" autofocus="" />

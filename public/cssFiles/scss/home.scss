@@ -2,10 +2,20 @@
 @import './flx-news-container';
 @import'./flx-vid-container';
 
+html{
+  font-size: 100%;
+  @media (max-width:1000px){
+    font-size: 85%;
+  }
+  @media (max-width:600px){
+    font-size: 75%;
+  }
+}
 body {
   background-color: #eee;
   height: 100vh;
 }
+
 .page-container {
   min-height: 100%;
   .content-wrap{
@@ -24,5 +34,17 @@ body {
   }
   li{    
     font-size: 20px;
+  }
+}
+
+main{
+  margin: 20px 6%;
+  @media(max-width: 1200px){
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  @media(max-width: 1000px){
+    margin-left: 5px;
+    margin-right: 5px;
   }
 }

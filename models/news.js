@@ -14,10 +14,10 @@ const newsSchema = new mongoose.Schema({
   },
   updated: { 
     type: Date, 
-    default: Date.now
   },
   created: { 
     type: Date, 
+    default: Date.now
   },
   bdFormatTime:{
     year: String,
@@ -25,6 +25,7 @@ const newsSchema = new mongoose.Schema({
     day: String,
     hour: String,
     minute: String,
+    timeString: String,
   },
   isRecent: {
     type: Boolean,
