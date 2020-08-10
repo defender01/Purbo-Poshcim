@@ -179,6 +179,7 @@
 .flx-news-container .flx-cld-major .recent .slider .carousel.slide .carousel-inner .carousel-item {
   width: 100%;
   height: 100%;
+  position: relative;
 }
 
 .flx-news-container .flx-cld-major .recent .slider .carousel.slide .carousel-inner .carousel-item img {
@@ -191,6 +192,12 @@
   color: black;
   font-size: 1.5rem;
   line-height: 200%;
+}
+
+@media (max-width: 800px) {
+  .flx-news-container .flx-cld-major .recent .slider .carousel.slide .carousel-inner .carousel-item .carousel-caption a {
+    font-size: 1rem;
+  }
 }
 
 .flx-news-container .flx-cld-major .recent .news-card {
