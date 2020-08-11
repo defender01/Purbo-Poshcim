@@ -4,7 +4,6 @@ $font-color: rgb(0, 0, 0);
 .flx-news-container {
   font-family: "Hind Siliguri", sans-serif;
   @media (min-width: 1200px) {
-    display: none;
     display: flex;
     justify-content: space-between;
   }

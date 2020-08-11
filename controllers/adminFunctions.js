@@ -115,7 +115,7 @@ async function getHome (req, res){
   async function postCreateNews (req, res){
     let data = req.body;
     // res.send(data)
-    let timeNow = Date.now()
+    let timeNow = new Date()
     let timeOb =converToBdTime(timeNow)
     let details = new newsDetailsModel({
       _id: new mongoose.Types.ObjectId(),
