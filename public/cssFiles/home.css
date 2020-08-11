@@ -134,6 +134,7 @@
 }
 
 .flx-news-container .flx-cld-major .recent .sec-title .see-more {
+  text-align: right;
   margin-top: 5px;
   width: 200px;
   font-size: 1.2rem;
@@ -189,13 +190,13 @@
 .flx-news-container .flx-cld-major .recent .slider .carousel.slide .carousel-inner .carousel-item .carousel-caption a {
   background-color: #ffffffaf;
   color: black;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   line-height: 200%;
 }
 
 @media (max-width: 800px) {
   .flx-news-container .flx-cld-major .recent .slider .carousel.slide .carousel-inner .carousel-item .carousel-caption a {
-    font-size: 1rem;
+    font-size: .9rem;
   }
 }
 
@@ -225,7 +226,7 @@
 }
 
 .flx-news-container .flx-cld-major .recent .news-card .news-cont .item-title {
-  font-size: .8rem;
+  font-size: .9rem;
   flex: 1;
   margin: 10px 10px 10px 0;
   display: flex;
@@ -238,7 +239,7 @@
 }
 
 .flx-news-container .flx-cld-major .recent .news-card .news-cont .item-title .date-cont {
-  font-size: .8rem;
+  font-size: .9rem;
   color: #93979a;
 }
 
@@ -292,6 +293,7 @@
 }
 
 .flx-news-container .flx-cld-major .general .sec-title .see-more {
+  text-align: right;
   margin-top: 5px;
   width: 200px;
   font-size: 1.2rem;
@@ -327,7 +329,7 @@
 }
 
 .flx-news-container .flx-cld-major .general .news-card .news-cont .item-title {
-  font-size: .8rem;
+  font-size: .9rem;
   flex: 1;
   margin: 10px 10px 10px 0;
   display: flex;
@@ -340,7 +342,7 @@
 }
 
 .flx-news-container .flx-cld-major .general .news-card .news-cont .item-title .date-cont {
-  font-size: .8rem;
+  font-size: .9rem;
   color: #93979a;
 }
 
@@ -502,22 +504,6 @@
 .flx-vid-container .flx-cld-minor {
   margin: 5px;
   flex: 1;
-}
-
-html {
-  font-size: 100%;
-}
-
-@media (max-width: 1000px) {
-  html {
-    font-size: 85%;
-  }
-}
-
-@media (max-width: 600px) {
-  html {
-    font-size: 75%;
-  }
 }
 
 body {

@@ -2,15 +2,6 @@
 @import './flx-news-container';
 @import'./flx-vid-container';
 
-html{
-  font-size: 100%;
-  @media (max-width:1000px){
-    font-size: 85%;
-  }
-  @media (max-width:600px){
-    font-size: 75%;
-  }
-}
 body {
   background-color: #eee;
   height: 100vh;

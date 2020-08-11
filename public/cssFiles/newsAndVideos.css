@@ -71,22 +71,6 @@
   flex: 1;
 }
 
-html {
-  font-size: 100%;
-}
-
-@media (max-width: 1000px) {
-  html {
-    font-size: 85%;
-  }
-}
-
-@media (max-width: 600px) {
-  html {
-    font-size: 75%;
-  }
-}
-
 body {
   background-color: #eee;
   height: 100vh;
@@ -294,7 +278,7 @@ main {
 }
 
 .flx-news-container .flx-cld-major .general .news-card .news-cont .item-title {
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   flex: 1;
   margin: 10px 10px 10px 0;
   display: flex;
@@ -307,7 +291,7 @@ main {
 }
 
 .flx-news-container .flx-cld-major .general .news-card .news-cont .item-title .date-cont {
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   color: #93979a;
 }
 

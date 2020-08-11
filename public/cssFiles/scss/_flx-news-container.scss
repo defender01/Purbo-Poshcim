@@ -113,6 +113,7 @@ $font-color: rgb(0, 0, 0);
           font-size: 1.5rem;
         }
         .see-more{
+          text-align: right;
           margin-top: 5px;
           width: 200px;
           font-size: 1.2rem;
@@ -160,9 +161,9 @@ $font-color: rgb(0, 0, 0);
                 a {
                   background-color: #ffffffaf;
                   color: $font-color;
-                  font-size: 1.5rem;
+                  font-size: 1.2rem;
                   @media(max-width: 800px){
-                    font-size: 1rem;
+                    font-size: .9rem;
                   }
                   line-height: 200%;
                 }
@@ -196,7 +197,7 @@ $font-color: rgb(0, 0, 0);
             }
           }
           .item-title {
-            font-size: .8rem;
+            font-size: .9rem;
             flex: 1;
             margin: 10px 10px 10px 0;
             display: flex;
@@ -206,7 +207,7 @@ $font-color: rgb(0, 0, 0);
               color: $font-color;
             }
             .date-cont{
-              font-size: .8rem;
+              font-size: .9rem;
               color: #93979a;
             }
           }
@@ -258,6 +259,7 @@ $font-color: rgb(0, 0, 0);
           font-size: 1.5rem;
         }
         .see-more{
+          text-align: right;
           margin-top: 5px;
           width: 200px;
           font-size: 1.2rem;
@@ -294,7 +296,7 @@ $font-color: rgb(0, 0, 0);
             }
           }
           .item-title {
-            font-size: .8rem;
+            font-size: .9rem;
             flex: 1;
             margin: 10px 10px 10px 0;
             display: flex;
@@ -304,7 +306,7 @@ $font-color: rgb(0, 0, 0);
               color: $font-color;
             }
             .date-cont{
-              font-size: .8rem;
+              font-size: .9rem;
               color: #93979a;
             }
           }

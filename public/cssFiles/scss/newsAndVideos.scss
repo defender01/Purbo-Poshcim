@@ -2,15 +2,6 @@
 @import "./flx-vid-container";
 
 $font-color: rgb(0, 0, 0);
-html {
-  font-size: 100%;
-  @media (max-width: 1000px) {
-    font-size: 85%;
-  }
-  @media (max-width: 600px) {
-    font-size: 75%;
-  }
-}
 body {
   background-color: #eee;
   height: 100vh;
@@ -185,7 +176,7 @@ main {
             }
           }
           .item-title {
-            font-size: 0.8rem;
+            font-size: 0.9rem;
             flex: 1;
             margin: 10px 10px 10px 0;
             display: flex;
@@ -195,7 +186,7 @@ main {
               color: $font-color;
             }
             .date-cont {
-              font-size: 0.8rem;
+              font-size: 0.9rem;
               color: #93979a;
             }
           }
