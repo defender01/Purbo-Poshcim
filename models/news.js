@@ -30,6 +30,10 @@ const newsSchema = new mongoose.Schema({
   isRecent: {
     type: Boolean,
     default: false
+  },
+  views: {
+    type: Number,
+    default: 0
   }
 });
 

@@ -89,6 +89,15 @@ async function getNewsDetails(req, res) {
       path: "newsDetails",
     });
 
+    // current view with this visit
+    console.log(data.views+1)
+
+    await newsModel.findByIdAndUpdate(
+      {_id: id},
+      {
+        views:  data.views+1
+      }
+    )
   res.render("newsDetails", { classes, data });
 }
 
