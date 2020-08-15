@@ -42,39 +42,33 @@ async function getHome(req, res) {
   //   }
   // }
 
-  await newsModel.find({ isRecent: true }, (err, result) => {
-    if (err) console.error(err);
-    newsData["সাম্প্রতিক"] = result.reverse();
-  });
+  newsData["সাম্প্রতিক"] = await newsModel.find({ isRecent: true }).sort({created: -1}).limit(20);
   for (let i = 0; i < classes.length; i++) {
-    await newsModel.find({ class: classes[i] }, (err, result) => {
-      if (err) console.error(err);
-      newsData[classes[i]] = result.reverse();
-    });
+    newsData[classes[i]] = await newsModel.find({ class: classes[i] }).sort({created: -1}).limit(20);
   }
-  let vidData = (await videoModel.find({})).reverse();
+  let vidData = await videoModel.find({}).sort({created: -1}).limit(20);
   res.render("home", { classes, vidData, newsData });
 }
 async function getVideos(req, res) {
-  await videoModel.find({}, (err, data) => {
-    data = data.reverse();
-    if (err) console.error(err);
-    else res.render("videos", { classes, data });
-  });
+  data = await videoModel.find({}).sort({ created: -1 });
+  res.render("videos", { classes, data });
 }
 
 async function getSectionNews(req, res) {
   let nClass = req.params.class;
   if (nClass == "সাম্প্রতিক") {
-    data = await newsModel.find({
-      isRecent: true,
-    });
+    data = await newsModel
+      .find({
+        isRecent: true,
+      })
+      .sort({ created: -1 });
   } else {
-    data = await newsModel.find({
-      class: nClass,
-    });
+    data = await newsModel
+      .find({
+        class: nClass,
+      })
+      .sort({ created: -1 }); // sort({created: -1}); -1 is for descending order based on created
   }
-  data = data.reverse();
 
   res.render("news", { classes, data, nClass });
 }
@@ -89,15 +83,15 @@ async function getNewsDetails(req, res) {
       path: "newsDetails",
     });
 
-    // current view with this visit
-    console.log(data.views+1)
+  // current view with this visit
+  console.log(data.views + 1);
 
-    await newsModel.findByIdAndUpdate(
-      {_id: id},
-      {
-        views:  data.views+1
-      }
-    )
+  await newsModel.findByIdAndUpdate(
+    { _id: id },
+    {
+      views: data.views + 1,
+    }
+  );
   res.render("newsDetails", { classes, data });
 }
 

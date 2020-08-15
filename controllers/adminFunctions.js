@@ -213,7 +213,7 @@ async function getHome (req, res){
       title: data.title,
       class: data.class,
       videoUrl: data.videoUrl,
-      created: Date.now()
+      updated: new Date()
     });
   
     data = await news.save();
@@ -238,6 +238,7 @@ async function getHome (req, res){
         title: data.title,
         class: data.class,
         videoUrl: data.videoUrl,
+        updated: new Date()
       },
       (err, data) => {
         if (err) console.error(err);

@@ -11,11 +11,11 @@ const videoSchema = new mongoose.Schema({
       type:String
   },
   updated: { 
-    type: Date, 
-    default: Date.now
+    type: Date
   },
   created: { 
-    type: Date
+    type: Date,
+    default: Date.now
   }
 });
 
