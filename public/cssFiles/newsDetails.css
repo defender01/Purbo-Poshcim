@@ -93,6 +93,50 @@ body {
   margin: 20px 0 20px 0;
 }
 
+.flx-prnt .flx-content .publicity {
+  padding: 10px;
+  height: 80px;
+  display: flex;
+}
+
+.flx-prnt .flx-content .publicity .fb-share-cont {
+  flex: 1;
+  width: 100%;
+  margin: 20px 0 20px 0;
+}
+
+.flx-prnt .flx-content .publicity .view {
+  margin: auto;
+  box-shadow: 0 0 3px #ccc;
+  width: 80px;
+  height: 30px;
+  display: flex;
+}
+
+.flx-prnt .flx-content .publicity .view .icon {
+  flex: 1;
+  padding: 5px;
+  display: flex;
+  box-shadow: 0 0 3px #ccc;
+}
+
+.flx-prnt .flx-content .publicity .view .icon img {
+  margin: auto;
+  width: 25px;
+  height: 25px;
+}
+
+.flx-prnt .flx-content .publicity .view .count {
+  background-color: rgba(190, 190, 190, 0.329);
+  flex: 1;
+  color: slategray;
+  display: flex;
+}
+
+.flx-prnt .flx-content .publicity .view .count p {
+  margin: auto;
+}
+
 .flx-prnt .flx-content .ad-container-top {
   position: relative;
   width: 100%;
