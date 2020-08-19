@@ -75,6 +75,10 @@ router.post("/video/update/:id", checkAuthenticated, postUpdateVideo);
 
 router.get("/video/delete/:id", checkAuthenticated, deleteVideo);
 
+router.get("/admanage", (req, res)=>{
+  res.render('adManage', {classes})
+});
+
 // Login Page
 router.get("/auth/login", checkNotAuthenticated, (req, res) => res.render("login", {classes}) );
 // Login

@@ -1,0 +1,19 @@
+@import url("https://fonts.googleapis.com/css2?family=Hind+Siliguri&display=swap");
+body {
+  background-color: #eee;
+  height: 100vh;
+}
+
+.page-container {
+  min-height: 100%;
+}
+
+.page-container .content-wrap {
+  overflow: auto;
+  padding-bottom: 270px;
+}
+
+main {
+  margin: 10%;
+  background-color: white;
+}
