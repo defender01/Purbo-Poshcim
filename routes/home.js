@@ -1,6 +1,6 @@
-var express = require("express");
-var router = express.Router();
-
+const express = require("express");
+const router = express.Router();
+const {newsModel} = require("../models/news")
 const {
   getHome,
   getVideos,
@@ -31,7 +31,13 @@ router.get("/videos", getVideos);
 
 router.get("/news/:class", getSectionNews);
 
-router.get("/newsDetails/:convertedTitle/:id", getNewsDetails);
+// this only redirects to the new url which is given next
+router.get("/newsDetails/:id", async (req, res)=>{
+  let id = req.params.id
+  let data = await newsModel.findOne({ _id: id});
+  res.redirect('/newsDetails/'+data._id+'/'+data.title.trim().replace(/\s/g,'-'))
+});
+router.get("/newsDetails/:id/:convertedTitle", getNewsDetails);
 
 router.get('/aboutUs', (req, res)=>{
   res.render('aboutUs', {classes})

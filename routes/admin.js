@@ -3,6 +3,7 @@ const router = express.Router();
 const passport = require("passport");
 // Load User model
 const User = require("../models/userInfo");
+const {newsModel} = require('../models/news')
 
 const {
   converToBdTime,
@@ -51,7 +52,12 @@ router.get("/", checkAuthenticated, getHome);
 
 router.get("/news/:class", checkAuthenticated, getSectionNews);
 
-router.get("/newsDetails/:convertedTitle/:id", checkAuthenticated, getNewsDetails);
+router.get("/newsDetails/:id", async (req, res)=>{
+  let id = req.params.id
+  let data = await newsModel.findOne({_id: id});
+  res.redirect('/admin/newsDetails/'+data._id+'/'+data.title.trim().replace(/\s/g,'-'))
+});
+router.get("/newsDetails/:id/:convertedTitle", checkAuthenticated, getNewsDetails);
 
 router.get("/createNews", checkAuthenticated, getCreateNews);
 

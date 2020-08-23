@@ -79,11 +79,11 @@
                 <img src="<%= data[i].photoUrl %>" alt="This image is not found" />
                 <% if( data[i].title.length > 70) { %>
                 <div class="item-title">
-                  <a href="/admin/newsDetails/<%= data[i].title.replace(/\s/g,'-')%>/<%=data[i]._id%>"><%= data[i].title.substring(0,69) + ' . . .'%></a> 
+                  <a href="/admin/newsDetails/<%=data[i]._id%>/<%= data[i].title.trim().replace(/\s/g,'-')%>"><%= data[i].title.substring(0,69) + ' . . .'%></a> 
                 </div>
                 <%} else{ %>
                 <div class="item-title">
-                  <a href="/admin/newsDetails/<%= data[i].title.replace(/\s/g,'-')%>/<%=data[i]._id%>"><%= data[i].title%></a> 
+                  <a href="/admin/newsDetails/<%=data[i]._id%>/<%= data[i].title.trim().replace(/\s/g,'-')%>"><%= data[i].title%></a> 
                 </div>                
                 <% } %>
                 <div class="change-opt">

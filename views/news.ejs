@@ -81,7 +81,7 @@
                             />
                           </div>                        
                           <div class="item-title">
-                            <a href="/newsDetails/<%=data[0]._id%>"><%= data[0].title%></a>        
+                            <a href="/newsDetails/<%=data[0]._id%>/<%= data[0].title.trim().replace(/\s/g,'-')%>"><%= data[0].title%></a>        
                             <div class="date-cont">
                               <%= data[0].bdFormatTime.timeString%>
                             </div>
@@ -101,7 +101,7 @@
                             />
                           </div>                        
                           <div class="item-title">
-                            <a href="/newsDetails/<%= data[i].title.replace(/\s/g,'-')%>/<%=data[i]._id%>"><%= data[i].title%></a>        
+                            <a href="/newsDetails/<%=data[i]._id%>/<%= data[i].title.trim().replace(/\s/g,'-')%>"><%= data[i].title%></a>        
                             <div class="date-cont">
                               <%= data[i].bdFormatTime.timeString%>
                             </div>
@@ -139,7 +139,7 @@
                             />
                           </div>                        
                           <div class="item-title">
-                            <a href="/newsDetails/<%= data[i].title.replace(/\s/g,'-')%>/<%=data[i]._id%>"><%= data[i].title%></a>        
+                            <a href="/newsDetails/<%=data[i]._id%>/<%= data[i].title.trim().replace(/\s/g,'-')%>"><%= data[i].title%></a>        
                             <div class="date-cont">
                               <%= data[i].bdFormatTime.timeString%>
                             </div>
