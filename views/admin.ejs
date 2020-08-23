@@ -66,11 +66,11 @@
                 />
                 <% if( newsData['সাম্প্রতিক'] [j].title.length > 70) { %>
                 <div class="item-title">
-                  <a href="/admin/newsDetails/<%=newsData['সাম্প্রতিক'][j]._id%>"><%= newsData['সাম্প্রতিক'][j].title.substring(0,69) + ' . . .'%></a>
+                  <a href="/admin/newsDetails/<%= newsData['সাম্প্রতিক'][j].title.replace(/\s/g,'-')%>/<%=newsData['সাম্প্রতিক'][j]._id%>"><%= newsData['সাম্প্রতিক'][j].title.substring(0,69) + ' . . .'%></a>
                 </div>
                 <%} else{ %>
                 <div class="item-title">
-                  <a href="/admin/newsDetails/<%=newsData['সাম্প্রতিক'][j]._id%>"><%= newsData['সাম্প্রতিক'][j].title%></a>
+                  <a href="/admin/newsDetails/<%= newsData['সাম্প্রতিক'][j].title.replace(/\s/g,'-')%>/<%=newsData['সাম্প্রতিক'][j]._id%>"><%= newsData['সাম্প্রতিক'][j].title%></a>
                 </div>
                 <% } %>
               </div>
@@ -95,11 +95,11 @@
                   />
                   <% if( newsData[classes[i]] [j].title.length > 70) { %>
                   <div class="item-title">
-                    <a href="/admin/newsDetails/<%=newsData[classes[i]][j]._id%>"><%= newsData[classes[i]][j].title.substring(0,69) + ' . . .'%></a>
+                    <a href="/admin/newsDetails/<%= newsData[classes[i]][j].title.replace(/\s/g,'-')%>/<%=newsData[classes[i]][j]._id%>"><%= newsData[classes[i]][j].title.substring(0,69) + ' . . .'%></a>
                   </div>
                   <%} else{ %>
                   <div class="item-title">
-                    <a href="/admin/newsDetails/<%=newsData[classes[i]][j]._id%>"><%= newsData[classes[i]][j].title%></a>
+                    <a href="/admin/newsDetails/<%= newsData[classes[i]][j].title.replace(/\s/g,'-')%>/<%=newsData[classes[i]][j]._id%>"><%= newsData[classes[i]][j].title%></a>
                   </div>
                   <% } %>
                 </div>

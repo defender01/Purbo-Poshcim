@@ -6,10 +6,12 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
+    <!-- google search engine canonical -->
+    <link rel="canonical" href="http://www.purboposhcim.com/newsDetails/<%= data.title.replace(/\s/g,'-')%>/<%= data._id %>">
     <!-- open graph protocol tobe recognized by facebook-->
     <meta property="og:title" content="<%= data.title %>" />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="http://www.purboposhcim.com/newsDetails/<%= data._id %>" />
+    <meta property="og:url" content="http://www.purboposhcim.com/newsDetails/<%= data.title.replace(/\s/g,'-')%>/<%= data._id %>" />
     <meta property="og:image" content="<%=data.photoUrl%>">
     <meta property="og:description" content="সংবাদ বিবরন" />
     <meta property="og:image:type" content="image/jpeg">

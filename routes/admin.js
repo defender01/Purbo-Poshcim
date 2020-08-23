@@ -51,7 +51,7 @@ router.get("/", checkAuthenticated, getHome);
 
 router.get("/news/:class", checkAuthenticated, getSectionNews);
 
-router.get("/newsDetails/:id", checkAuthenticated, getNewsDetails);
+router.get("/newsDetails/:convertedTitle/:id", checkAuthenticated, getNewsDetails);
 
 router.get("/createNews", checkAuthenticated, getCreateNews);
 

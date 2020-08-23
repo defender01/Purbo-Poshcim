@@ -31,7 +31,7 @@ router.get("/videos", getVideos);
 
 router.get("/news/:class", getSectionNews);
 
-router.get("/newsDetails/:id", getNewsDetails);
+router.get("/newsDetails/:convertedTitle/:id", getNewsDetails);
 
 router.get('/aboutUs', (req, res)=>{
   res.render('aboutUs', {classes})
