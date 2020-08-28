@@ -52,9 +52,36 @@
                     <div class="title-container">
                         <p><%= data.title %></p>
                     </div>
+                    <div class="author-cont">
+                        <% if(data.author !=='undefined') {%>
+                            <img src="/assets/images/writer.png" alt="">
+                            <p><%= data.author %></p>
+                        <% } %>
+                        <div class="date-container">
+                             <img src="/assets/images/clock.png" alt="">
+                            <p><%= data.bdFormatTime.day %>-<%= data.bdFormatTime.month %>-<%= data.bdFormatTime.year %></p>
+                        </div>  
+                    </div>
+                                      
+                    <div class="publicity">
+                        <!-- facebook share link -->
+                        <div class="fb-share-cont">
+                            <div class="fb-share-button">Share</a></div>
+                        </div>
+                        <div class="view">
+                            <div class="icon">
+                                <img src='/assets/images/eye.png' alt="">
+                            </div>
+                            <div class="count">
+                                <p><%= data.views %></p>
+                            </div>                            
+                        </div>
+                    </div>
+                   
                     <div class="img-container">
                         <img src="<%=data.photoUrl%>" alt="This image is not found">
                     </div>
+                   
                     <div class="details-container">
                         <%- data.newsDetails.details%>
                     </div>

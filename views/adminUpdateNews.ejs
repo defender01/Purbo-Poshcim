@@ -107,6 +107,15 @@
                   <input type="text" name="photoUrl" value="<%= data.photoUrl %>" required>
               </div>
             </div>
+
+            <div class="part">
+              <div class="title">
+                Author name:
+              </div>
+              <div class="input-elm">
+                  <input type="text" name="author" value="<%= typeof data.author !=='undefined'? data.author: '' %>" required>
+              </div>
+            </div>
   
             <div class="part">
               <div class="title">

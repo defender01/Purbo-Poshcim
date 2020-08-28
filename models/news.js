@@ -35,7 +35,7 @@ const newsSchema = new mongoose.Schema({
     type: Number,
     default: 0
   },
-  writer: String
+  author: String
 });
 
 const newsDetailsSchema = new mongoose.Schema({

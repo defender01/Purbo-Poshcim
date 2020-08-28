@@ -137,12 +137,13 @@ async function getHome (req, res){
        },
       newsDetails: details._id,
       photoUrl: data.photoUrl,
+      author: data.author,
       updated: timeNow
     });
   
     await details.save();
     await news.save();
-    res.redirect("/admin");
+    res.redirect("/admin/newsDetails/"+news._id+'/'+news.title.trim().replace(/\s/g,'-'));
   }
 
   async function getUpdateNews (req, res) {
@@ -171,6 +172,7 @@ async function getHome (req, res){
         class: data.class,
         isRecent: data.recent=='checked',
         photoUrl: data.photoUrl,
+        author: data.author
       }
     );
     await newsDetailsModel.findOneAndUpdate(
@@ -180,7 +182,7 @@ async function getHome (req, res){
       { details: data.newsDetails }
     );
   
-    res.redirect("/admin/newsDetails/"+id);
+    res.redirect("/admin/newsDetails/"+id+'/'+data.title.trim().replace(/\s/g,'-'));
   }
 
   async function deleteNews (req, res){

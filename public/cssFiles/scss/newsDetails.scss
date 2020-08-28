@@ -57,8 +57,38 @@ body {
     }
     .title-container {
       margin: 30px 0 20px 0;
-      font-size: 24px;
+      font-size: 1.5rem;
       font-weight: bold;
+    }
+    .author-cont{
+      min-height: 40px;
+      text-align:left;
+      display: flex;
+      padding: 10px;
+      align-items: center;
+      img{
+        height:25px;
+        width: 25px;
+      }
+      p{
+        font-size: .8rem;
+        margin-left: 10px;
+        padding-top: 10px;
+      }
+      .date-container{
+        margin-left: 10px;
+        display: flex;
+        align-items: center;
+        color: rgba(112, 112, 112, 0.726);
+        img{
+          height: 1rem;
+          width: 1rem;
+        }
+        p{
+          font-size: .7rem;
+          font-weight: bold;
+        }
+      }
     }
 
     .fb-share-cont {
