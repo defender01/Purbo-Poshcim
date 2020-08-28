@@ -28,12 +28,20 @@
 .footer .upper-body .info-container .adContact {
   margin: auto;
   width: 100%;
-  text-align: center;
+  text-align: left;
   font-size: 22px;
 }
 
-.footer .upper-body .info-container .adContact a {
-  color: #c0ae0e;
+.footer .upper-body .info-container .adContact button {
+  border: 3px solid #f8f9fa;
+  border-radius: 10px;
+  padding: 10px;
+  background-color: #273c75;
+  color: #f8f9fa;
+}
+
+.footer .upper-body .info-container .adContact button:hover {
+  background-color: rgba(10, 55, 58, 0.856);
 }
 
 .footer .upper-body .link-container {

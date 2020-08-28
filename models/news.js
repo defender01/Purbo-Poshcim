@@ -34,7 +34,8 @@ const newsSchema = new mongoose.Schema({
   views: {
     type: Number,
     default: 0
-  }
+  },
+  writer: String
 });
 
 const newsDetailsSchema = new mongoose.Schema({
