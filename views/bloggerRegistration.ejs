@@ -67,59 +67,65 @@
         <% include ./segments/header%>
         <!-- navigation bar -->
         <% include ./segments/navbar %>
-
-        <div class="form-container">
+        <main>
+          <div class="form-container">
+            <% include ./segments/messages %>
             <div class="title">রেজিস্ট্রেশনের তথ্য দিন</div>
-            <div class="field">
+            <form action="/auth/register/blogger" method="post">
+              <div class="field">
                 <div class="tag">
                     নাম
                 </div>
                 <div class="input" >
-                    <input type="text" class="form-control" name="fullName" placeholder="আপনার নাম*" required>
+                    <input type="text" class="form-control" name="name" placeholder="আপনার নাম" value="<%= typeof name!= 'undefined' ? name: '' %>" required>
                 </div>
-            </div>  
-            <div class="field">
-                <div class="tag">
-                    ইমেইল
-                </div>
-                <div class="input">
-                    <input type="email" class="form-control" name="email" placeholder="ইমেইল এড্রেস*" required>
-                </div>
-            </div> 
-            <div class="field">
-                <div class="tag">
-                    মোবাইল নং
-                </div>
-                <div class="input">
-                    <input type="text" class="form-control" name="mobileNo" placeholder="আপনার মোবাইল নং*" required>
-                </div>
-            </div> 
-            <div class="field">
-                <div class="tag">
-                    পাসওয়ার্ড
-                </div>
-                <div class="input">
-                    <input type="password" class="form-control" name="password1" required>
-                </div>
-            </div> 
-            <div class="field">
-                <div class="tag">
-                    পাসওয়ার্ড
-                </div>
-                <div class="input">
-                    <input type="password" class="form-control" name="password2" required>
-                </div>
-            </div> 
-            <div class="field">
-                <div class="tag">
-                    ছবি
-                </div>
-                <div class="input">
-                    <input type="file" class="form-control-file" name="profilePic" required>
-                </div>
-            </div> 
-        </div>
-
+              </div>  
+              <div class="field">
+                  <div class="tag">
+                      ইমেইল
+                  </div>
+                  <div class="input">
+                      <input type="email" class="form-control" name="email" placeholder="ইমেইল এড্রেস*" value="<%= typeof email!= 'undefined' ? email: '' %>" required>
+                  </div>
+              </div> 
+              <div class="field">
+                  <div class="tag">
+                      মোবাইল নং
+                  </div>
+                  <div class="input">
+                      <input type="text" class="form-control" name="phoneNumber" placeholder="আপনার মোবাইল নং" value="<%= typeof phoneNumber!= 'undefined' ? phoneNumber: '' %>" required>
+                  </div>
+              </div> 
+              <div class="field">
+                  <div class="tag">
+                      পাসওয়ার্ড
+                  </div>
+                  <div class="input">
+                      <input type="password" class="form-control" name="password" required>
+                  </div>
+              </div> 
+              <div class="field">
+                  <div class="tag">
+                      পুনরায় পাসওয়ার্ড
+                  </div>
+                  <div class="input">
+                      <input type="password" class="form-control" name="password2" required>
+                  </div>
+              </div> 
+              <div class="field">
+                  <div class="tag">
+                      ছবি
+                  </div>
+                  <div class="input">
+                      <input type="file" class="form-control-file" name="profilePic" >
+                  </div>
+              </div> 
+              <div class="btn-container">
+                <button type="submit">Submit</button>
+              </div>
+            </form>            
+          </div>
+        </main>       
        
       </div>
     </div>

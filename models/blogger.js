@@ -1,10 +1,11 @@
 const mongoose = require("mongoose");
 
-const UserSchema = new mongoose.Schema({
+const bloggerSchema = new mongoose.Schema({
   name: String,
   email: {
     type: String
   },
+  phoneNumber: Number,
   password: {
     type: String
   },
@@ -19,6 +20,6 @@ const UserSchema = new mongoose.Schema({
   }
 });
 
-const User = mongoose.model("User", UserSchema);
+const blogger = mongoose.model("blogger", bloggerSchema);
 
-module.exports = User;
+module.exports = blogger;

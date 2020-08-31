@@ -3,20 +3,7 @@ const mongoose = require("mongoose");
 const { newsModel, newsDetailsModel } = require("../models/news");
 const videoModel = require("../models/video");
 
-const classes = [
-  "বাংলাদেশ",
-  "আন্তর্জাতিক",
-  "অর্থনীতি",     
-  "সাহিত্য",
-  "ক্যাম্পাস",
-  "শিক্ষা",    
-  "খেলা",
-  "বিজ্ঞান ও প্রযুক্তি",
-  "বিনোদন",
-  "উদ্ভাবন",
-  "মতামত",
-  "কর্মসূচী",
-];
+const { checkNotNull, trimSpace, classes} = require("../controllers/functionCollection")
 
 
 
@@ -57,7 +44,7 @@ function getBdDate(createTime){
 }
 
 async function getHome (req, res){
-    let displayName = req.user.name.displayName;
+    let displayName = req.user.name;
     let newsData = {}
     await newsModel.find({isRecent: true}, (err, result) => {
       if (err) console.error(err);
@@ -74,7 +61,7 @@ async function getHome (req, res){
   }
 
   async function getSectionNews (req, res){
-    let displayName = req.user.name.displayName;
+    let displayName = req.user.name;
     let nClass = req.params.class;
     let data;
     if(nClass == 'সাম্প্রতিক'){
@@ -95,7 +82,7 @@ async function getHome (req, res){
   }
 
   async function getNewsDetails (req, res){
-    let displayName = req.user.name.displayName;
+    let displayName = req.user.name;
     let id = req.params.id;
     let data = await newsModel
       .findOne({
@@ -108,7 +95,7 @@ async function getHome (req, res){
   }
 
   function getCreateNews(req, res) {
-    let displayName = req.user.name.displayName;
+    let displayName = req.user.name;
     res.render("adminCreateNews", { classes, displayName });
   }
 
@@ -147,7 +134,7 @@ async function getHome (req, res){
   }
 
   async function getUpdateNews (req, res) {
-    let displayName = req.user.name.displayName;
+    let displayName = req.user.name;
     let id = req.params.id;
   
     let data = await newsModel
@@ -162,7 +149,7 @@ async function getHome (req, res){
 
   async function postUpdateNews (req, res) {  
     let data = req.body;
-    let displayName = req.user.name.displayName;
+    let displayName = req.user.name;
     let id = req.params.id;
     let dId = req.params.dId;
     await newsModel.findOneAndUpdate(
@@ -186,7 +173,7 @@ async function getHome (req, res){
   }
 
   async function deleteNews (req, res){
-    let displayName = req.user.name.displayName;
+    let displayName = req.user.name;
     let id = req.params.id;
     let dId = req.params.dId;
   
@@ -196,7 +183,7 @@ async function getHome (req, res){
   }
 
   async function getVideos (req, res) {
-    let displayName = req.user.name.displayName;
+    let displayName = req.user.name;
     await videoModel.find({}, (err, data) => {
       data = data.reverse()
       if (err) console.error(err);
@@ -205,7 +192,7 @@ async function getHome (req, res){
   }
 
   function getCreateVideo(req, res) {
-    let displayName = req.user.name.displayName;
+    let displayName = req.user.name;
     res.render("adminCreateVideo", { classes, displayName });
   }
 
@@ -223,7 +210,7 @@ async function getHome (req, res){
   }
 
   async function getUpdateVideo (req, res) {
-    let displayName = req.user.name.displayName;
+    let displayName = req.user.name;
     let id = req.params.id;
   
     let data = await videoModel.findOne({ _id: id });
@@ -232,7 +219,7 @@ async function getHome (req, res){
 
   async function postUpdateVideo (req, res) {
     let data = req.body;
-    let displayName = req.user.name.displayName;
+    let displayName = req.user.name;
     let id = req.params.id;
     await videoModel.findOneAndUpdate(
       { _id: id },
@@ -250,7 +237,7 @@ async function getHome (req, res){
   }
 
   async function deleteVideo (req, res) {
-    let displayName = req.user.name.displayName;
+    let displayName = req.user.name;
     let id = req.params.id;
   
     await videoModel.deleteOne({ _id: id });

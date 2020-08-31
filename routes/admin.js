@@ -32,21 +32,7 @@ const {
 } = require("../controllers/auth_helper");
 
 
-const classes = [
-  "বাংলাদেশ",
-  "আন্তর্জাতিক",
-  "অর্থনীতি",     
-  "সাহিত্য",
-  "ক্যাম্পাস",
-  "শিক্ষা",    
-  "খেলা",
-  "বিজ্ঞান ও প্রযুক্তি",
-  "বিনোদন",
-  "উদ্ভাবন",
-  "মতামত",
-  "কর্মসূচী",
-];
-
+const { checkNotNull, trimSpace, classes} = require("../controllers/functionCollection")
 
 router.get("/", checkAuthenticated, getHome);
 

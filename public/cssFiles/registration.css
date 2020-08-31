@@ -18,6 +18,7 @@ html {
 body {
   background-color: #eee;
   height: 100vh;
+  font-family: Hind Siliguri;
 }
 
 .page-container {
@@ -27,4 +28,59 @@ body {
 .page-container .content-wrap {
   overflow: auto;
   padding-bottom: 270px;
+}
+
+main {
+  margin: 5%;
+  display: flex;
+}
+
+@media (max-width: 1200px) {
+  main {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
+
+@media (max-width: 1000px) {
+  main {
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+}
+
+main .form-container {
+  box-shadow: 0 0 3px #ccc;
+  border-radius: 4px;
+  margin: auto;
+  background-color: white;
+  width: 500px;
+  text-align: left;
+  padding: 20px;
+}
+
+main .form-container .title {
+  width: 100%;
+  text-align: center;
+  font-size: 1.3rem;
+  margin-bottom: 30px;
+}
+
+main .form-container .field {
+  margin: 10px 0 20px 0;
+}
+
+main .form-container .btn-container {
+  width: 100%;
+  margin: 30px 0 20px 0;
+}
+
+main .form-container .btn-container button {
+  width: 100%;
+  margin-top: 10px;
+  height: 40px;
+  border: 0px;
+  border-radius: 4px;
+  background-color: #007bff;
+  color: #ffffff;
 }
