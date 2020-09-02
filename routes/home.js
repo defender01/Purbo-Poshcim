@@ -26,16 +26,16 @@ router.get("/newsDetails/:id", async (req, res)=>{
 });
 router.get("/newsDetails/:id/:convertedTitle", getNewsDetails);
 
-router.get('/aboutUs', (req, res)=>{
+router.get('/about-us', (req, res)=>{
   res.render('aboutUs', {classes})
 })
-router.get('/termsAndConditions', (req, res)=>{
+router.get('/terms-and-conditions', (req, res)=>{
   res.render('termsAndConditions', {classes})
 })
-router.get('/privacyPolicy', (req, res)=>{
+router.get('/privacy-policy', (req, res)=>{
   res.render('privacyPolicy', {classes})
 })
-router.get('/contactUs', (req, res)=>{
+router.get('/contact-us', (req, res)=>{
   res.render('contactUs', {classes})
 })
 router.get('/ad', (req, res)=>{

@@ -2,12 +2,22 @@
 <html lang="en">
 
 <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-169815710-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-169815710-1');
+    </script>
+    
+    <!-- google search engine canonical -->
+    <link rel="canonical" href="http://www.purboposhcim.com/newsDetails/<%= data._id %>/<%= data.title.trim().replace(/\s/g,'-')%>">
     <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-
-    <!-- google search engine canonical -->
-    <!-- <link rel="canonical" href="http://www.purboposhcim.com/newsDetails/<%= data._id %>/<%= data.title.trim().replace(/\s/g,'-')%>"> -->
+    <meta name="title" content="<%= data.title %>">
     <!-- open graph protocol tobe recognized by facebook-->
     <meta property="og:title" content="<%= data.title %>" />
     <meta property="og:type" content="website" />

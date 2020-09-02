@@ -8,20 +8,6 @@ const Blogger = require("../models/blogger");
 const { checkNotAuthenticated, registerBlogger } = require("../controllers/auth_helper");
 const { checkNotNull, trimSpace, classes} = require("../controllers/functionCollection")
 
-// const classes = [
-//   "বাংলাদেশ",
-//   "আন্তর্জাতিক",
-//   "অর্থনীতি",     
-//   "সাহিত্য",
-//   "ক্যাম্পাস",
-//   "শিক্ষা",    
-//   "খেলা",
-//   "বিজ্ঞান ও প্রযুক্তি",
-//   "বিনোদন",
-//   "উদ্ভাবন",
-//   "মতামত",
-//   "কর্মসূচী",
-// ];
 
 
 // Login Page
