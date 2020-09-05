@@ -33,12 +33,12 @@ function redirectUrl(req, res, next){
   var host = req.get('Host');
   let originalUrl = req.originalUrl
 
-  if (host !== 'http://www.purboposhcim.com' && host !== 'localhost:4000') {  
-    console.log('http://www.purboposhcim.com' + originalUrl)
-    
-    // return res.redirect(301, 'http://www.purboposhcim.com' + originalUrl);
-    return res.redirect('http://www.purboposhcim.com' + originalUrl);
-  }
+  // if (host !== 'http://www.purboposhcim.com' && host !== 'localhost:4000') {  
+  //   console.log('http://www.purboposhcim.com' + originalUrl)
+
+  //   // return res.redirect(301, 'http://www.purboposhcim.com' + originalUrl);
+  //   return res.redirect('http://www.purboposhcim.com' + originalUrl);
+  // }
   return next();
 }
 
