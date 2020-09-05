@@ -25,8 +25,26 @@ function trimSpace(obj){
     return obj
 }
 
+// this function redirects to http://www.purboposhcim.com for other duplicate url
+function redirectUrl(req, res, next){
+  console.log('came in redirectUrl')
+  console.log(req.get('Host')+req.originalUrl)
+
+  var host = req.get('Host');
+  let originalUrl = req.originalUrl
+
+  if (host !== 'http://www.purboposhcim.com' && host !== 'localhost:4000') {  
+    console.log('http://www.purboposhcim.com' + originalUrl)
+    
+    // return res.redirect(301, 'http://www.purboposhcim.com' + originalUrl);
+    return res.redirect('http://www.purboposhcim.com' + originalUrl);
+  }
+  return next();
+}
+
   module.exports = {
       checkNotNull,
       trimSpace,
-      classes
+      classes,
+      redirectUrl
   }

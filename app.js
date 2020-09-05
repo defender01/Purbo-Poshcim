@@ -5,6 +5,7 @@ var flash = require('connect-flash')
 var session = require("express-session")
 var passport = require("passport")
 const statsModel = require("./models/stats");
+const {redirectUrl} =  require("./controllers/functionCollection")
 
 var app = express();
 
@@ -84,10 +85,10 @@ async function increaseVisit(req, res, next){
   next()
 }
 
-app.use('/',increaseVisit, require('./routes/home'));
-app.use('/users',increaseVisit, require('./routes/users'));
-app.use("/auth",increaseVisit, require("./routes/auth.js"))
-app.use("/admin",increaseVisit, require("./routes/admin.js"))
+app.use('/',increaseVisit, redirectUrl , require('./routes/home'));
+app.use('/users',increaseVisit, redirectUrl, require('./routes/users'));
+app.use("/auth",increaseVisit, redirectUrl, require("./routes/auth.js"))
+app.use("/admin",increaseVisit, redirectUrl, require("./routes/admin.js"))
 
 
 
