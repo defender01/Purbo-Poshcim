@@ -72,12 +72,12 @@
 
             <div class="flx-prnt">
                 
-                <div class="flx-ad">
-                </div>
+                <!-- <div class="flx-ad">
+                </div> -->
                 
                 <div class="flx-content">
                     <div class="ad-container-top">
-                        <a href="/contactUs"><img src="/assets/images/ad.jpg" style="border: 0;" title="Call for ad"/></a>
+                        <a href="/contact-us"><img src="/assets/images/ad.jpg" style="border: 0;" title="Call for ad"/></a>
                     </div>
                     <div class="title-container">
                         <p><%= data.title %></p>
@@ -130,6 +130,30 @@
                 </div>
 
                 <div class="flx-ad">
+                    <div class="news-suggestions">
+                        <div class="sec-title">
+                            এই বিভাগের আরও
+                        </div>
+                        <% for (let i=0; i< newsData .length; i++) { %>
+                            <div class="news-card">         
+                              <div class="news-cont">
+                                <div class="img-cont">
+                                  <img class="news_image"
+                                    src="<%=newsData[i].photoUrl%>"
+                                    alt="This image is not found"
+                                  />
+                                </div>                        
+                                <div class="item-title">
+                                  <a href="/newsDetails/<%=newsData[i]._id%>/<%= newsData[i].title.trim().replace(/\s/g,'-')%>"><%= newsData[i].title%></a>        
+                                  <div class="date-cont">
+                                    <%= newsData[i].bdFormatTime.timeString%>
+                                  </div>
+                                </div> 
+                                
+                              </div>      
+                            </div>
+                        <% } %>
+                    </div>                    
                 </div>
 
             </div>

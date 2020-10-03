@@ -92,7 +92,10 @@ async function getNewsDetails(req, res) {
       views: data.views + 1,
     }
   );
-  res.render("newsDetails", { classes, data });
+
+  newsData = await newsModel.find({ class: data.class }).sort({created: -1}).limit(15);
+
+  res.render("newsDetails", { classes, data, newsData });
 }
 
 module.exports = {
