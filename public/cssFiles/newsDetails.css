@@ -262,7 +262,6 @@ body {
 .flx-prnt .flx-ad .news-suggestions .news-card {
   background-color: white;
   min-height: 100px;
-  max-height: 120px;
   display: flex;
   align-items: center;
   box-shadow: 0 0 3px #ccc;
