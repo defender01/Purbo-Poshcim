@@ -70,6 +70,7 @@ app.use(function(req, res, next) {
 app.use("/assets", express.static(__dirname + "/public"))
 // all used photos are in resources
 app.use("/resources", express.static(__dirname + "/resources"))
+app.use("/ad.txt", express.static(__dirname + "/public/files/ads.txt"))
 
 async function increaseVisit(req, res, next){
    let data = await statsModel.findOne({})
