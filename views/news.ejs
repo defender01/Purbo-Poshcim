@@ -140,17 +140,14 @@
                 </div> 
               </div>
 
-               <!-- adsense vertical ad -->
-               <% include ./segments/verticalAd%>
-
               <div class="flx-news-container-old"> 
                 <div class="flx-cld-major"> 
                   <div class="general">
       
                     <% for (let i=10; i< data .length; i++) { %>
-                      <%if(i%8==0){%>
+                      <%if((i-10)%8==0){%>
                          <!-- adsense square ad -->
-                         <% include ./segments/squareAd%>
+                         <% include ./segments/verticalAd%>
                       <%}%>
                       <div class="news-card">         
                         <div class="news-cont">
