@@ -105,7 +105,7 @@
                       </div>                      
                     </div>
                    
-                    <% for (let i=1; i< Math.min(data .length, 10); i++) { %>
+                    <% for (let i=1; i< Math.min(data .length, 10); i++) { %> 
                       <div class="news-card">         
                         <div class="news-cont">
                           <div class="img-cont">
@@ -134,16 +134,24 @@
                     </div>
                     <div class="holder">
                       <div class="fb-page" data-href="https://www.facebook.com/purboposhcimnews/" data-tabs="timeline" data-width="" data-height="210" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/purboposhcimnews/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/purboposhcimnews/">purboposhcim.com</a></blockquote></div>
-                    </div>                
+                    </div> 
+              
                   </div>
                 </div> 
               </div>
+
+               <!-- adsense vertical ad -->
+               <% include ./segments/verticalAd%>
 
               <div class="flx-news-container-old"> 
                 <div class="flx-cld-major"> 
                   <div class="general">
       
                     <% for (let i=10; i< data .length; i++) { %>
+                      <%if(i%8==0){%>
+                         <!-- adsense square ad -->
+                         <% include ./segments/squareAd%>
+                      <%}%>
                       <div class="news-card">         
                         <div class="news-cont">
                           <div class="img-cont">

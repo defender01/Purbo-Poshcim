@@ -153,8 +153,11 @@
                 </div>                
               </div>
             </div>
-
           </div>
+
+          <!-- adsense vertical ad -->
+          <% include ./segments/verticalAd%>
+          
           <!-- all other news -->
           <% for (let i=0; i< classes.length; i++) { %>
             <% if(newsData[classes[i]].length !== 0 ) { %>
@@ -189,7 +192,10 @@
                         </div>      
                       </div>                      
                     </div>
-                   
+
+                    <!-- adsense square ad -->
+                    <% include ./segments/squareAd%>
+
                     <% for (let j=1; j< Math.min(newsData[classes[i]] .length, 10); j++) { %>
                       <div class="news-card">         
                         <div class="news-cont">
@@ -209,10 +215,12 @@
                         </div>      
                       </div>
                     <% } %>
-                  </div>  
-                  
+                  </div>                    
                 </div> 
               </div>
+              <!-- adsense vertical ad -->
+              <% include ./segments/verticalAd%>
+
             <% } %>
           <% } %>
 
