@@ -12,6 +12,11 @@ const newsSchema = new mongoose.Schema({
   photoUrl:{
       type:String
   },
+  photoFile:{
+    Bucket:String,
+    Key:String,
+    Location: String
+  },
   updated: { 
     type: Date, 
   },

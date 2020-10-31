@@ -1,17 +1,22 @@
 @import url("https://fonts.googleapis.com/css2?family=Hind+Siliguri&display=swap");
 .header {
+  background-color: #eeeeee;
   width: 100%;
-  height: calc(10vw);
+  height: 200px;
   padding: 5px;
   display: flex;
   justify-content: space-between;
-  background-color: #eee;
+}
+
+@media (max-width: 600px) {
+  .header {
+    display: none;
+  }
 }
 
 .header .logo {
-  max-width: 230px;
-  max-height: 110px;
-  flex: 1;
+  width: 230px;
+  height: 100%;
   background: url("/assets/images/logo.png") no-repeat;
   background-size: 100%;
 }
@@ -23,5 +28,6 @@
 }
 
 .header .ad-container {
-  flex: 3;
+  flex: 1;
+  max-height: 200px;
 }

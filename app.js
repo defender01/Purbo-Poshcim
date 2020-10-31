@@ -46,7 +46,7 @@ app.use(flash())
 
 mongoose
   .connect(
-    "mongodb+srv://defender:161034@cluster0-5dm6t.mongodb.net/<dbname>?retryWrites=true&w=majority",
+    "mongodb+srv://defender:"+process.env.MONGODB_DATABASE_PASS+"@cluster0-5dm6t.mongodb.net/<dbname>?retryWrites=true&w=majority",
     {
       useNewUrlParser: true,
       useUnifiedTopology: true,

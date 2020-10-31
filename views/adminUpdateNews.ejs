@@ -46,10 +46,11 @@
     <div class="page-container">
       <div class="content-wrap">
         <% include ./segments/header%>
-        <form action="/admin/news/update/<%= data._id %>/<%= data.newsDetails._id %>" method="POST">
+        <form action="/admin/news/update/<%= data._id %>/<%= data.newsDetails._id %>" method="POST" enctype="multipart/form-data">
           <!-- navigation bar -->
           <% include ./segments/adminNavbar %>
           <div class="form-container">
+            <% include ./segments/messages%>
             <div class="part">
               <div class="title">
                 Title:
@@ -62,8 +63,8 @@
               <div class="part">
                 <div class="title">
                   <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="checked" id="recent" name="recent" checked>
-                    <label class="form-check-label" for="recent" >
+                    <input class="form-check-input" type="checkbox" value="checked" id="isRecent" name="isRecent" checked>
+                    <label class="form-check-label" for="isRecent" >
                       Use as recent
                     </label>
                     <small class="form-text text-muted">News lebeled as recent will be shown at the top of the home page in 'সাম্প্রতিক সংবাদ'</small>
@@ -74,8 +75,8 @@
               <div class="part">
                 <div class="title">
                   <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="checked" id="recent" name="recent">
-                    <label class="form-check-label" for="recent" >
+                    <input class="form-check-input" type="checkbox" value="checked" id="isRecent" name="isRecent">
+                    <label class="form-check-label" for="isRecent" >
                       Use as recent
                     </label>
                     <small class="form-text text-muted">News lebeled as recent will be shown at the top of the home page in 'সাম্প্রতিক সংবাদ'</small>
@@ -106,6 +107,13 @@
               <div class="input-elm">
                   <input type="text" name="photoUrl" value="<%= data.photoUrl %>" required>
               </div>
+              or
+             <div class="imput-elm">
+              <div class="form-group">
+                <input type="file" id="newsPhoto" name="newsPhoto" class="form-control-file" id="exampleFormControlFile1" accept="image/x-png,image/gif,image/jpeg" >
+                <small class="form-text text-muted">*File size should be less than 1000kb</small>
+              </div>
+             </div>
             </div>
 
             <div class="part">

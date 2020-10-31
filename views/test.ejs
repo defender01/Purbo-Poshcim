@@ -25,9 +25,16 @@
     <link rel="stylesheet" href="/assets/cssFiles/home.css" />    
     <link rel="stylesheet" href="/assets/cssFiles/footer.css">
 
+    <!-- cdn -->
+    <script src="https://sdk.amazonaws.com/js/aws-sdk-2.780.0.min.js"></script>
     <script src="https://cdn.ckeditor.com/4.14.0/standard/ckeditor.js"></script>
 
+    <script src="/assets/jsFiles/test.js"></script>
+
     <title>ক্যাম্পাস প্রতিদিন</title>
+
+    <script>viewAlbum()</script>
+
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-169815710-1"></script>
@@ -40,24 +47,17 @@
     </script>
   </head>
 
-  <body>
+  <body >
     <div class="page-container">
       <div class="content-wrap">
         <!-- navigation bar -->
         <% include ./segments/navbar %>
        
-        <input id='rawUrl' type="text">
-        <button onclick="urlToEmbed()">Send</button>
-        <p id='embedUrl'></p>
-        
-        <div style="width: 300px; height: 200px;">
-          <blockquote class="embedly-card"><h4><a href="https://photos.app.goo.gl/BAyijkykn8EiWCMt5">New photo by Rahat Rizvi Rahman</a></h4><p>null</p></blockquote>
-          <script async src="//cdn.embedly.com/widgets/platform.js" charset="UTF-8"></script>
-  
-        </div>
-        
+       <img id="photoId" src="/assets/images/purboposhcim_cover.jpg" style="height: 500px;width: 400px;" alt="">
+       
+      
       </div>
-        
+
     </div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

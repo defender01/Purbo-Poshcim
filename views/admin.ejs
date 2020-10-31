@@ -82,7 +82,7 @@
 
             <!-- all other news -->
             <% for (let i=0; i< classes.length; i++) { %>
-              <% if(newsData[classes[i]].length !== 0 ) { %>
+              <% if(typeof newsData[classes[i]] !== 'undefined' && newsData[classes[i]].length !== 0 ) { %>
                 <div class="section-title">
                   <h3><%= classes[i] %></h3>
                 </div>                       
