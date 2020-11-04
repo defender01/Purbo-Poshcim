@@ -22,7 +22,7 @@
     <!-- <script data-ad-client="ca-pub-4266924221770969" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> -->
 
 
-    <link rel="stylesheet" href="/assets/cssFiles/header.css" />
+    
     <!-- stylesheet for navbar -->
     <link rel="stylesheet" href="/assets/cssFiles/navbar.css">
     <link rel="stylesheet" href="/assets/cssFiles/newsAndVideos.css" />
@@ -45,7 +45,7 @@
   <body>
     <div class="page-container">
       <div class="content-wrap">
-        <% include ./segments/header%>
+        
         <form action="/admin/news/update/<%= data._id %>/<%= data.newsDetails._id %>" method="POST" enctype="multipart/form-data">
           <!-- navigation bar -->
           <% include ./segments/adminNavbar %>
@@ -84,7 +84,7 @@
                 </div>              
               </div>
             <% } %>
-
+            
             <div class="part">
               <div class="title">
                 Secect a Class:

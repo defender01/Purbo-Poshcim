@@ -401,6 +401,15 @@ $font-color: rgb(0, 0, 0);
   }
   .flx-cld-minor {
     flex: 1;
+    .search-bar{
+      margin: 10px;
+      margin-top: 15px;
+      background-color: white;
+
+      -moz-box-shadow: 0 0 3px #ccc;
+      -webkit-box-shadow: 0 0 3px #ccc;
+      box-shadow: 0 0 3px #ccc;
+    }
     .fb-page-cont{
       margin: 10px;
       margin-top: 15px;

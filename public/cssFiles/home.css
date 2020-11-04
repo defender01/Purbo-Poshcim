@@ -438,6 +438,13 @@
   flex: 1;
 }
 
+.flx-news-container .flx-cld-minor .search-bar {
+  margin: 10px;
+  margin-top: 15px;
+  background-color: white;
+  box-shadow: 0 0 3px #ccc;
+}
+
 .flx-news-container .flx-cld-minor .fb-page-cont {
   margin: 10px;
   margin-top: 15px;
