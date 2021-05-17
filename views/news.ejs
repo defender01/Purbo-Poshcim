@@ -45,6 +45,7 @@
     <link rel="stylesheet" href="/assets/cssFiles/navbar.css" />
     <link rel="stylesheet" href="/assets/cssFiles/newsAndVideos.css" />
     <link rel="stylesheet" href="/assets/cssFiles/footer.css" />
+    <link rel="stylesheet" href="/assets/cssFiles/pagination.css" />
 
     <title><%= nClass %> - পূর্ব পশ্চিম</title>
 
@@ -175,6 +176,9 @@
                 </div>
               </div>
             <% } %>
+            <div class="pagination-holder">
+              <% include ./segments/pagination %>
+            </div>
           </main>
         </div>
       </div>

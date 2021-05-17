@@ -103,6 +103,11 @@ main {
   }
 }
 
+main .pagination-holder {
+  margin: 30px 0 50px 0;
+  height: 80px;
+}
+
 .flx-news-container {
   font-family: "Hind Siliguri", sans-serif;
 }
