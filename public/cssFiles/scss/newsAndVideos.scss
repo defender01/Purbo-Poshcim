@@ -11,6 +11,11 @@ body {
   .content-wrap {
     overflow: auto;
     padding-bottom: 270px;
+
+    .pagination-holder {
+      margin: 30px 0 50px 0;
+      height: 80px;
+    }
   }
 }
 

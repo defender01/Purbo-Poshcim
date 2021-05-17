@@ -112,18 +112,60 @@ async function getSectionNews(req, res) {
   let displayName = req.user.name;
   let nClass = req.params.class;
   let data;
+  const LIMIT = 20;
+  let { page } = req.query;
+  page = parseInt(typeof page != "undefined" ? page : 1);
+
+  let totalItems = 0;
+
   if (nClass == "সাম্প্রতিক") {
-    data = await newsModel.find({
+    totalItems = await newsModel.countDocuments({
       isRecent: true,
     });
+
+    data = await newsModel
+      .find({
+        isRecent: true,
+      })
+      .sort({ created: -1 })
+      .limit(LIMIT)
+      .skip(LIMIT * (page - 1)); // sort({created: -1}); -1 is for descending order based on created;
   } else {
-    data = await newsModel.find({
+    totalItems = await newsModel.countDocuments({
       class: nClass,
     });
-  }
-  data = data.reverse();
 
-  res.render("adminNews", { classes, data, nClass, displayName });
+    data = await newsModel
+      .find({
+        class: nClass,
+      })
+      .sort({ created: -1 })
+      .limit(LIMIT)
+      .skip(LIMIT * (page - 1)); // sort({created: -1}); -1 is for descending order based on created
+  }
+
+  let paginationUrl = req.originalUrl.toString();
+  if (paginationUrl.includes(`page=`))
+    paginationUrl = paginationUrl.replace(`page=${page}`, "page=");
+  else {
+    paginationUrl = paginationUrl.includes("?")
+      ? `${paginationUrl}&page=`
+      : `${paginationUrl}?page=`;
+  }
+
+  res.render("adminNews", {
+    classes,
+    data,
+    nClass,
+    displayName,
+    currentPage: page,
+    hasNextPage: page * LIMIT < totalItems,
+    hasPreviousPage: page > 1,
+    nextPage: page + 1,
+    previousPage: page - 1,
+    lastPage: Math.ceil(totalItems / LIMIT),
+    URL: paginationUrl,
+  });
 }
 
 async function getNewsDetails(req, res) {
